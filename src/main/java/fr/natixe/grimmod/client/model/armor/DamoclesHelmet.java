@@ -28,7 +28,7 @@ public class DamoclesHelmet extends BipedModel<LivingEntity> {
 	public static final ResourceLocation TEXTURE = new ResourceLocation(GrimMod.MODID, "textures/models/armor/damocles_helmet.png");
 
 	public DamoclesHelmet() {
-		super(0.5f);
+		super(1f);
 		texWidth = 64;
 		texHeight = 64;
 
@@ -822,7 +822,7 @@ public class DamoclesHelmet extends BipedModel<LivingEntity> {
 		bone14.texOffs(19, 40).addBox(-1.0F, -12.0F, -7.0F, 1.0F, 1.0F, 1.0F, 0.0F, false);
 		bone14.texOffs(19, 40).addBox(-2.0F, -11.0F, -7.0F, 1.0F, 1.0F, 1.0F, 0.0F, false);
 		bone14.texOffs(23, 42).addBox(-2.0F, -4.0F, -7.0F, 1.0F, 1.0F, 1.0F, 0.0F, false);
-		bone14.texOffs(23, 42).addBox(-1.0F, -6.0F, -7.0F, 1.0F, 1.0F, 1.0F, 0.0F, false);
+		bone14.texOffs(23, 42).addBox( -1.0F, -6.0F, -7.0F, 1.0F, 1.0F, 1.0F, 0.0F, false);
 		bone14.texOffs(23, 42).addBox(-2.0F, -3.0F, -7.0F, 1.0F, 1.0F, 1.0F, 0.0F, false);
 		bone14.texOffs(23, 42).addBox(-2.0F, -5.0F, -7.0F, 1.0F, 1.0F, 1.0F, 0.0F, false);
 		bone14.texOffs(19, 40).addBox(-4.0F, -7.0F, -7.0F, 1.0F, 1.0F, 1.0F, 0.0F, false);

@@ -5,6 +5,7 @@ import fr.natixe.grimmod.utils.ModArmorMaterials;
 import fr.natixe.grimmod.utils.ModCreativeTab;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.ArmorItem;
+import net.minecraft.item.IArmorMaterial;
 import net.minecraft.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.RegistryObject;
@@ -25,8 +26,10 @@ public class ModItems {
     //Full stuff in DAMOCLES_ARMOR
 
     public static final RegistryObject<Item> DAMOCLES_HELMET = ITEMS.register("damolces_helmet",
-            () -> new ArmorItem(ModArmorMaterials.DAMOCLES_ARMOR, EquipmentSlotType.HEAD,
-                    new Item.Properties().tab(ModCreativeTab.ARMOR_3D)));
+           () -> new ModArmorItem(material, slotType, properties, () -> ItemArmorRegistration::getFirstArmor));
+           // () -> new ArmorItem(ModArmorMaterials.DAMOCLES_ARMOR, EquipmentSlotType.HEAD,
+           //         new Item.Properties().tab(ModCreativeTab.ARMOR_3D)));
+
     public static final RegistryObject<Item> DAMOCLES_CHESTPLATE = ITEMS.register("damolces_chestplate",
             () -> new ArmorItem(ModArmorMaterials.DAMOCLES_ARMOR, EquipmentSlotType.CHEST,
                     new Item.Properties().tab(ModCreativeTab.ARMOR_3D)));

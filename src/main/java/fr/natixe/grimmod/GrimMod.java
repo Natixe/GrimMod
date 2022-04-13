@@ -1,5 +1,6 @@
 package fr.natixe.grimmod;
 
+import fr.natixe.grimmod.init.ItemArmorRegistration;
 import fr.natixe.grimmod.init.ModArmorItem;
 import fr.natixe.grimmod.init.ModItems;
 import net.minecraft.block.Block;
@@ -37,7 +38,6 @@ public class GrimMod {
 
         IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
         ModItems.ITEMS.register(bus);
-
         // Register ourselves for server and other game events we are interested in
     }
 
