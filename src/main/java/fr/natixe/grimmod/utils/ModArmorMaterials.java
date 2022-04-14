@@ -36,7 +36,7 @@ public enum ModArmorMaterials implements IArmorMaterial {
     private final float knockbackResistance;
     private final LazyValue<Ingredient> repairIngredient;
 
-    private ModArmorMaterials(String p_i231593_3_, int p_i231593_4_, int[] p_i231593_5_, int p_i231593_6_, net.minecraft.util.SoundEvent p_i231593_7_, float p_i231593_8_, float p_i231593_9_, Supplier<Ingredient> p_i231593_10_) {
+    ModArmorMaterials(String p_i231593_3_, int p_i231593_4_, int[] p_i231593_5_, int p_i231593_6_, net.minecraft.util.SoundEvent p_i231593_7_, float p_i231593_8_, float p_i231593_9_, Supplier<Ingredient> p_i231593_10_) {
         this.name = p_i231593_3_;
         this.durabilityMultiplier = p_i231593_4_;
         this.slotProtections = p_i231593_5_;
@@ -47,35 +47,43 @@ public enum ModArmorMaterials implements IArmorMaterial {
         this.repairIngredient = new LazyValue<>(p_i231593_10_);
     }
 
-    public int getDurabilityForSlot(EquipmentSlotType p_200896_1_) {
-        return HEALTH_PER_SLOT[p_200896_1_.getIndex()] * this.durabilityMultiplier;
+    @Override
+    public int getDurabilityForSlot(EquipmentSlotType slot) {
+        return HEALTH_PER_SLOT[slot.getIndex()] * this.durabilityMultiplier;
     }
 
-    public int getDefenseForSlot(EquipmentSlotType p_200902_1_) {
-        return this.slotProtections[p_200902_1_.getIndex()];
+    @Override
+    public int getDefenseForSlot(EquipmentSlotType slot) {
+        return this.slotProtections[slot.getIndex()];
     }
 
+    @Override
     public int getEnchantmentValue() {
         return this.enchantmentValue;
     }
 
+    @Override
     public SoundEvent getEquipSound() {
         return this.sound;
     }
 
+    @Override
     public Ingredient getRepairIngredient() {
         return this.repairIngredient.get();
     }
 
     @OnlyIn(Dist.CLIENT)
+    @Override
     public String getName() {
         return this.name;
     }
 
+    @Override
     public float getToughness() {
         return this.toughness;
     }
 
+    @Override
     public float getKnockbackResistance() {
         return this.knockbackResistance;
     }
