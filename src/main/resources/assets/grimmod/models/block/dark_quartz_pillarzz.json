@@ -1,0 +1,18 @@
+{
+"textures": {
+    "variants": {
+      "axis=x": {
+        "model": "grimmod:block/dark_quartz_pillar",
+        "x": 90,
+        "y": 90
+      },
+      "axis=y": {
+        "model": "grimmod:block/dark_quartz_pillar_top"
+      },
+      "axis=z": {
+        "model": "grimmod:block/dark_quartz_pillar",
+        "x": 90
+      }
+    }
+  }
+}

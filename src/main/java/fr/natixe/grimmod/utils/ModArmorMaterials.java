@@ -72,7 +72,6 @@ public enum ModArmorMaterials implements IArmorMaterial {
         return this.repairIngredient.get();
     }
 
-    @OnlyIn(Dist.CLIENT)
     @Override
     public String getName() {
         return this.name;

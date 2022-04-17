@@ -2,15 +2,16 @@ package fr.natixe.grimmod.client.model.armor;
 
 import com.mojang.blaze3d.matrix.MatrixStack;
 import com.mojang.blaze3d.vertex.IVertexBuilder;
-import it.unimi.dsi.fastutil.objects.ObjectArrayList;
-import it.unimi.dsi.fastutil.objects.ObjectList;
+import fr.natixe.grimmod.GrimMod;
 import net.minecraft.client.renderer.entity.model.BipedModel;
 import net.minecraft.client.renderer.model.ModelRenderer;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.inventory.EquipmentSlotType;
+import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 
+@OnlyIn(Dist.CLIENT)
 public class DamoclesHelmet extends BipedModel<LivingEntity> {
 	private final ModelRenderer bone1;
 	private final ModelRenderer bone2;
@@ -28,8 +29,8 @@ public class DamoclesHelmet extends BipedModel<LivingEntity> {
 	private final ModelRenderer bone14;
 	private final ModelRenderer bone15;
 
-	//public static final ResourceLocation TEXTURE = new ResourceLocation(GrimMod.MODID, "textures/models/armor/damocles_helmet.png");
-	public static ObjectList<ModelRenderer> children = new ObjectArrayList<>();
+	public static final ResourceLocation TEXTURE = new ResourceLocation(GrimMod.MODID, "textures/models/armor/damocles_helmet_layer_1.png");
+
 
 	@OnlyIn(Dist.CLIENT)
 	public DamoclesHelmet() {
@@ -886,6 +887,8 @@ public class DamoclesHelmet extends BipedModel<LivingEntity> {
 
 	}
 
+
+
 	public final DamoclesHelmet applyEntityStats(BipedModel defaultArmor){
 
 		this.leftArmPose = defaultArmor.leftArmPose;
@@ -898,6 +901,7 @@ public class DamoclesHelmet extends BipedModel<LivingEntity> {
 		this.leftArm.copyFrom(defaultArmor.leftArm);
 		this.rightLeg.copyFrom(defaultArmor.rightLeg);
 		this.leftLeg.copyFrom(defaultArmor.leftLeg);
+
 
 		return this;
 	}
@@ -978,55 +982,6 @@ public class DamoclesHelmet extends BipedModel<LivingEntity> {
 		bone14.render(matrixStack, buffer, packedLight, packedOverlay);
 		bone15.render(matrixStack, buffer, packedLight, packedOverlay);
 	}
-
-
-	//public void render(MatrixStack matrixStack, IVertexBuilder buffer, int packedLight, int packedOverlay, float red, float green, float blue, float alpha) {
-	//	copyModelAngles(this.head, this.bone1);
-	//	copyModelAngles(this.head, this.bone2);
-	//	copyModelAngles(this.head, this.bone3);
-	//	copyModelAngles(this.head, this.bone4);
-	//	copyModelAngles(this.head, this.bone5);
-	//	copyModelAngles(this.head, this.bone6);
-	//	copyModelAngles(this.head, this.bone7);
-	//	copyModelAngles(this.head, this.bone8);
-	//	copyModelAngles(this.head, this.bone9);
-	//	copyModelAngles(this.head, this.bone10);
-	//	copyModelAngles(this.head, this.bone11);
-	//	copyModelAngles(this.head, this.bone12);
-	//	copyModelAngles(this.head, this.bone13);
-	//	copyModelAngles(this.head, this.bone14);
-	//	copyModelAngles(this.head, this.bone15);
-	//	matrixStack.pushPose();
-	//	if(crouching) matrixStack.translate(0, 0.2, 0);
-//
-	//	renderChildrenOnly(this.head, matrixStack, buffer, packedLight, packedOverlay, red, green, blue, alpha);
-	//	renderChildrenOnly(this.head, matrixStack, buffer, packedLight, packedOverlay, red, green, blue, alpha);
-	//	renderChildrenOnly(this.head, matrixStack, buffer, packedLight, packedOverlay, red, green, blue, alpha);
-	//	renderChildrenOnly(this.head, matrixStack, buffer, packedLight, packedOverlay, red, green, blue, alpha);
-	//	renderChildrenOnly(this.head, matrixStack, buffer, packedLight, packedOverlay, red, green, blue, alpha);
-	//	renderChildrenOnly(this.head, matrixStack, buffer, packedLight, packedOverlay, red, green, blue, alpha);
-	//	renderChildrenOnly(this.head, matrixStack, buffer, packedLight, packedOverlay, red, green, blue, alpha);
-	//	renderChildrenOnly(this.head, matrixStack, buffer, packedLight, packedOverlay, red, green, blue, alpha);
-	//	renderChildrenOnly(this.head, matrixStack, buffer, packedLight, packedOverlay, red, green, blue, alpha);
-	//	renderChildrenOnly(this.head, matrixStack, buffer, packedLight, packedOverlay, red, green, blue, alpha);
-	//	renderChildrenOnly(this.head, matrixStack, buffer, packedLight, packedOverlay, red, green, blue, alpha);
-	//	renderChildrenOnly(this.head, matrixStack, buffer, packedLight, packedOverlay, red, green, blue, alpha);
-	//	renderChildrenOnly(this.head, matrixStack, buffer, packedLight, packedOverlay, red, green, blue, alpha);
-	//	renderChildrenOnly(this.head, matrixStack, buffer, packedLight, packedOverlay, red, green, blue, alpha);
-	//	renderChildrenOnly(this.head, matrixStack, buffer, packedLight, packedOverlay, red, green, blue, alpha);
-//
-	//	matrixStack.popPose();
-	//}
-//
-	//private final void renderChildrenOnly(ModelRenderer bodyPart, MatrixStack matrixStack, IVertexBuilder buffer, int packedLight, int packedOverlay, float red, float green, float blue, float alpha){
-	//	if(!bodyPart.children.isEmpty()){
-	//		matrixStack.pushPose();
-	//		bodyPart.translateAndRotate(matrixStack);
-	//		for(ModelRenderer child : bodyPart.children)
-	//			child.render(matrixStack, buffer, packedLight, packedOverlay, red, green, blue, alpha);
-	//		matrixStack.popPose();
-	//	}
-	//}
 
 	public void setRotationAngle(ModelRenderer modelRenderer, float x, float y, float z) {
 		modelRenderer.xRot = x;

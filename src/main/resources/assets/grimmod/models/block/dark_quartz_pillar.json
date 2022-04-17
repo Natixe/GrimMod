@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "grimmod:block/dark_quartz_pillar_top",
+    "side": "grimmod:block/dark_quartz_pillar"
+  }
+}

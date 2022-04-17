@@ -1,5 +1,6 @@
 package fr.natixe.grimmod;
 
+import fr.natixe.grimmod.init.ModBlock;
 import fr.natixe.grimmod.init.ModItems;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -25,6 +26,8 @@ public class GrimMod {
 
         IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
         ModItems.ITEMS.register(bus);
+        ModBlock.BLOCKS.register(bus);
+
         // Register ourselves for server and other game events we are interested in
     }
 

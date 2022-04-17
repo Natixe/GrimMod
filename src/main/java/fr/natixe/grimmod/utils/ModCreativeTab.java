@@ -18,4 +18,10 @@ public class ModCreativeTab {
             return new ItemStack(ModItems.DAMOCLES_INGOT.get());
         }
     };
+    public static final ItemGroup MOD_BLOCK = new ItemGroup("Mod Block") {
+        @Override
+        public ItemStack makeIcon() {
+            return new ItemStack(ModItems.DAMOCLES_INGOT.get());
+        }
+    };
 }
