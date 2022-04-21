@@ -1,7 +1,33 @@
 {
   "variants": {
-    "": {
-      "model": "grimmod:block/craked_ice"
-    }
+    "": [
+      {
+        "model": "grimmod:block/craked_ice"
+      },
+      {
+        "model": "grimmod:block/craked_ice",
+        "y": 90
+      },
+      {
+        "model": "grimmod:block/craked_ice",
+        "y": 180
+      },
+      {
+        "model": "grimmod:block/craked_ice",
+        "y": 270
+      },
+      {
+        "model": "grimmod:block/craked_ice",
+        "x": 90
+      },
+      {
+        "model": "grimmod:block/craked_ice",
+        "x": 180
+      },
+      {
+        "model": "grimmod:block/craked_ice",
+        "x": 270
+      }
+    ]
   }
 }

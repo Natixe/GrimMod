@@ -1,0 +1,33 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "grimmod:block/charred_dirt"
+      },
+      {
+        "model": "grimmod:block/charred_dirt",
+        "y": 90
+      },
+      {
+        "model": "grimmod:block/charred_dirt",
+        "y": 180
+      },
+      {
+        "model": "grimmod:block/charred_dirt",
+        "y": 270
+      },
+      {
+        "model": "grimmod:block/charred_dirt",
+        "x": 90
+      },
+      {
+        "model": "grimmod:block/charred_dirt",
+        "x": 180
+      },
+      {
+        "model": "grimmod:block/charred_dirt",
+        "x": 270
+      }
+    ]
+  }
+}

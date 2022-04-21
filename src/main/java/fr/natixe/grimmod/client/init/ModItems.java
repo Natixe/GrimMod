@@ -1,16 +1,14 @@
-package fr.natixe.grimmod.init;
+package fr.natixe.grimmod.client.init;
 
 import fr.natixe.grimmod.GrimMod;
-import fr.natixe.grimmod.client.model.armor.DamoclesHelmet;
-import fr.natixe.grimmod.init.armor.ModArmorItem;
-import fr.natixe.grimmod.init.armor.ModCallArmor;
-import fr.natixe.grimmod.utils.ModArmorMaterials;
-import fr.natixe.grimmod.utils.ModCreativeTab;
+import fr.natixe.grimmod.client.init.armor.ModArmorItem;
+import fr.natixe.grimmod.client.utils.ModArmorMaterials;
+import fr.natixe.grimmod.client.utils.ModCreativeTab;
+import fr.natixe.grimmod.common.registration.item.registration.ItemRegistrationDamoclesArmor;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.ArmorItem;
 import net.minecraft.item.Item;
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
+import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -32,13 +30,19 @@ public class ModItems {
          //  () -> new ModArmorItem(material, slotType, properties, () -> ItemArmorRegistration::getFirstArmor));
            // () -> new ArmorItem(ModArmorMaterials.DAMOCLES_ARMOR, EquipmentSlotType.HEAD,
            //         new Item.Properties().tab(ModCreativeTab.ARMOR_3D)));
-    public static final RegistryObject<Item> DAMOCLES_HELMET = ITEMS.register("damolces_helmet",
-             () -> new ModArmorItem(ModArmorMaterials.DAMOCLES_ARMOR,EquipmentSlotType.HEAD,
-                  new Item.Properties().tab(ModCreativeTab.ARMOR_3D),new DamoclesHelmet()) );
+    //public static final RegistryObject<Item> DAMOCLES_HELMET = ITEMS.register("damolces_helmet",
+    //         () -> new ModArmorItem(ModArmorMaterials.DAMOCLES_ARMOR,EquipmentSlotType.HEAD,
+    //              new Item.Properties().tab(ModCreativeTab.ARMOR_3D),new DamoclesHelmet()) );
+
+
+   public static final RegistryObject<Item> DAMOCLES_HELMET = ITEMS.register("damocles_helmet",
+            () -> new ModArmorItem(ModArmorMaterials.DAMOCLES_ARMOR, EquipmentSlotType.HEAD,
+                   new Item.Properties().tab(ModCreativeTab.ARMOR_3D),
+                   () -> ItemRegistrationDamoclesArmor::DamoclesHelmetArmor));
 
 
 
-    public static final RegistryObject<Item> DAMOCLES_CHESTPLATE = ITEMS.register("damolces_chestplate",
+   public static final RegistryObject<Item> DAMOCLES_CHESTPLATE = ITEMS.register("damolces_chestplate",
             () -> new ArmorItem(ModArmorMaterials.DAMOCLES_ARMOR, EquipmentSlotType.CHEST,
                     new Item.Properties().tab(ModCreativeTab.ARMOR_3D)));
     public static final RegistryObject<Item> DAMOCLES_LEGGING = ITEMS.register("damolces_leggings",
@@ -137,4 +141,8 @@ public class ModItems {
                     new Item.Properties().tab(ModCreativeTab.ARMOR_3D)));
 
 
+
+    public static void register(IEventBus bus) {
+        ITEMS.register(bus);
+    }
 }

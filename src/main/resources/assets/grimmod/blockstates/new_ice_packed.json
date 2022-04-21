@@ -1,7 +1,33 @@
 {
   "variants": {
-    "": {
-      "model": "grimmod:block/new_ice_packed"
-    }
+    "": [
+      {
+        "model": "grimmod:block/new_ice_packed"
+      },
+      {
+        "model": "grimmod:block/new_ice_packed",
+        "y": 90
+      },
+      {
+        "model": "grimmod:block/new_ice_packed",
+        "y": 180
+      },
+      {
+        "model": "grimmod:block/new_ice_packed",
+        "y": 270
+      },
+      {
+        "model": "grimmod:block/new_ice_packed",
+        "x": 90
+      },
+      {
+        "model": "grimmod:block/new_ice_packed",
+        "x": 180
+      },
+      {
+        "model": "grimmod:block/new_ice_packed",
+        "x": 270
+      }
+    ]
   }
 }

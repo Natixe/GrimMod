@@ -1,14 +1,12 @@
-package fr.natixe.grimmod.utils;
+package fr.natixe.grimmod.client.utils;
 
-import fr.natixe.grimmod.init.ModItems;
+import fr.natixe.grimmod.client.init.ModItems;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.IArmorMaterial;
 import net.minecraft.item.crafting.Ingredient;
 import net.minecraft.util.LazyValue;
 import net.minecraft.util.SoundEvent;
 import net.minecraft.util.SoundEvents;
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
 
 import java.util.function.Supplier;
 

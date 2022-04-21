@@ -1,7 +1,33 @@
 {
   "variants": {
-    "": {
-      "model": "grimmod:block/blue_mossy_cobblestone"
-    }
+    "": [
+      {
+        "model": "grimmod:block/blue_mossy_cobblestone"
+      },
+      {
+        "model": "grimmod:block/blue_mossy_cobblestone",
+        "y": 90
+      },
+      {
+        "model": "grimmod:block/blue_mossy_cobblestone",
+        "y": 180
+      },
+      {
+        "model": "grimmod:block/blue_mossy_cobblestone",
+        "y": 270
+      },
+      {
+        "model": "grimmod:block/blue_mossy_cobblestone",
+        "x": 90
+      },
+      {
+        "model": "grimmod:block/blue_mossy_cobblestone",
+        "x": 180
+      },
+      {
+        "model": "grimmod:block/blue_mossy_cobblestone",
+        "x": 270
+      }
+    ]
   }
 }

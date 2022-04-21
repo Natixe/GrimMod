@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column_horizontal",
+  "textures": {
+    "end": "grimmod:block/charred_log_top",
+    "side": "grimmod:block/charred_log"
+  }
+}

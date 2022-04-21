@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "bottom": "grimmod:block/charred_planks",
+    "top": "grimmod:block/charred_planks",
+    "side": "grimmod:block/charred_planks"
+  }
+}

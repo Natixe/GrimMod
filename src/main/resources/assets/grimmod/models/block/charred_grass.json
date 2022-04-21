@@ -1,0 +1,51 @@
+{
+  "textures": {
+    "particle": "grimmod:block/charred_grass_block_side",
+    "cgbt": "grimmod:block/charred_grass_block_top",
+    "cgbs": "grimmod:block/charred_grass_block_side",
+    "cd": "grimmod:block/charred_dirt"
+  },
+  "elements": [{
+    "from": [0, 0, 0],
+    "to": [16, 16, 16],
+    "faces": {
+      "down": {
+        "texture": "#cd",
+        "rotation": 90
+      },
+      "down": {
+        "texture": "#cd"
+      },
+      "up": {
+        "texture": "#cgbt"
+      },
+      "north": {
+        "texture": "#cgbs"
+      },
+      "south": {
+        "texture": "#cgbs"
+      },
+      "west": {
+        "texture": "#cgbs"
+      },
+      "east": {
+        "texture": "#cgbs"
+      }
+    }
+  }],
+  "display": {
+    "gui": {
+      "rotation": [30, 143, 0],
+      "scale": [0.625, 0.625,0.625]
+    },
+    "firstperson_righthand": {
+      "rotation": [0, 47, 0],
+      "scale": [0.4, 0.4, 0.4]
+    },
+    "thirdperson_righthand": {
+      "rotation": [75, 47, 0],
+      "translation": [0, 2.5, 0],
+      "scale": [0.375, 0.375, 0.375]
+    }
+  }
+}

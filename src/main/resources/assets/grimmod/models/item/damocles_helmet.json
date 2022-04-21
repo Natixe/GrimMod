@@ -1,6 +1,5 @@
 {
-	"parent": "item/generated",
-	"textures": {
-		"layer0": "grimmod:item/damolces_helmet"
-	}
+  "parent": "item/generated",
+  "textures": {
+  	"all": "grimmod:item/damocles_helmet"
 }
