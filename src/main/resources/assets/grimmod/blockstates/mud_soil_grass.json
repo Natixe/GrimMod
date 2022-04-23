@@ -1,7 +1,21 @@
 {
   "variants": {
-    "": {
-      "model": "grimmod:block/mud_soil_grass"
-    }
+    "": [
+      {
+        "model": "grimmod:block/mud_soil_grass"
+      },
+      {
+        "model": "grimmod:block/mud_soil_grass",
+        "y": 90
+      },
+      {
+        "model": "grimmod:block/mud_soil_grass",
+        "y": 180
+      },
+      {
+        "model": "grimmod:block/mud_soil_grass",
+        "y": 270
+      }
+    ]
   }
 }

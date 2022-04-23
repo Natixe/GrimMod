@@ -4,7 +4,7 @@ import fr.natixe.grimmod.GrimMod;
 import fr.natixe.grimmod.client.init.armor.ModArmorItem;
 import fr.natixe.grimmod.client.utils.ModArmorMaterials;
 import fr.natixe.grimmod.client.utils.ModCreativeTab;
-import fr.natixe.grimmod.common.registration.item.registration.ItemRegistrationDamoclesArmor;
+import fr.natixe.grimmod.common.registration.item.ItemRegistrationDamoclesArmor;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.ArmorItem;
 import net.minecraft.item.Item;

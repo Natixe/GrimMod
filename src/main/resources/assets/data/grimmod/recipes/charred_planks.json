@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "grimmod:charred_log"
+    }
+  ],
+  "result": {
+    "item": "grimmod:charred_planks",
+    "count": 4
+  }
+}

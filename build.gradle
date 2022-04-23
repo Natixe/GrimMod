@@ -37,7 +37,7 @@ minecraft {
     mappings channel: 'official', version: '1.16.5'
     // makeObfSourceJar = false // an Srg named sources jar is made by default. uncomment this to disable.
     
-    // accessTransformer = file('src/main/resources/META-INF/accesstransformer.cfg')
+    //accessTransformer = file('src/main/resources/META-INF/accesstransformer.cfg')
 
     // Default run configurations.
     // These can be tweaked, removed, or duplicated as needed.
@@ -105,7 +105,7 @@ minecraft {
             args '--mod', 'grimmod', '--all', '--output', file('src/generated/resources/'), '--existing', file('src/main/resources/')
 
             mods {
-                grimmod {
+                examplemod {
                     source sourceSets.main
                 }
             }
