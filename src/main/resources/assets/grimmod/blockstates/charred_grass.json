@@ -1,7 +1,21 @@
 {
   "variants": {
-    "": {
-      "model": "grimmod:block/charred_grass"
-    }
+    "": [
+      {
+        "model": "grimmod:block/charred_grass"
+      },
+      {
+        "model": "grimmod:block/charred_grass",
+        "y": 90
+      },
+      {
+        "model": "grimmod:block/charred_grass",
+        "y": 180
+      },
+      {
+        "model": "grimmod:block/charred_grass",
+        "y": 270
+      }
+    ]
   }
 }

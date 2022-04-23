@@ -1,6 +1,6 @@
 package fr.natixe.grimmod;
 
-import fr.natixe.grimmod.client.init.ModBlock;
+import fr.natixe.grimmod.client.init.ModBlocks;
 import fr.natixe.grimmod.client.init.ModItems;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
@@ -34,7 +34,7 @@ public class GrimMod {
 
 
         ModItems.register(bus);
-        ModBlock.register(bus);
+        ModBlocks.register(bus);
         bus.addListener(this::setup);
         // Register the enqueueIMC method for modloading
         bus.addListener(this::enqueueIMC);

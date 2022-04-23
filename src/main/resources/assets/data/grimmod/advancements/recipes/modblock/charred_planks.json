@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "grimmod:charred_planks"
+    ]
+  },
+  "criteria": {
+    "Unlock Charred Planks": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "grimmod:charred_log"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "grimmod:charred_planks"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "Unlock Charred Planks",
+      "has_the_recipe"
+    ]
+  ]
+}

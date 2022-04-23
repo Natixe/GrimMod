@@ -46,6 +46,14 @@
       "rotation": [75, 47, 0],
       "translation": [0, 2.5, 0],
       "scale": [0.375, 0.375, 0.375]
+    },
+    "ground": {
+      "rotation": [9, 0, -7],
+      "translation": [0, 3, 0],
+      "scale": [0.27, 0.27, 0.27]
+    },
+    "fixed" : {
+      "scale": [0.55, 0.55, 0.55]
     }
   }
 }
