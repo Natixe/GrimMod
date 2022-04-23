@@ -1,1 +1,1 @@
-# GrimModV0.0.2
+# GrimMod
