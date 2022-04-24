@@ -98,8 +98,6 @@ public abstract class DamoclesHelmet extends BipedModel<LivingEntity> {
 
 		bone15 = new ModelRenderer(this);
 		bone15.setPos(0.0F, 24.0F, 0.0F);
-		bone15.texOffs(19, 40).addBox(0.0F, -33.0F, -8.0F, 1.0F, 1.0F, 1.0F, 0.0F, true);
-		bone15.texOffs(19, 40).addBox(-1.0F, -33.0F, -8.0F, 1.0F, 1.0F, 1.0F, 0.0F, false);
 		head.addChild(bone15);
 
 		this.head.addChild(bone1);

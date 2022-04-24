@@ -2,6 +2,7 @@ package fr.natixe.grimmod.client.init;
 
 import fr.natixe.grimmod.GrimMod;
 import fr.natixe.grimmod.client.init.block.BurntSoil;
+import fr.natixe.grimmod.client.init.block.CharredFarmLandBlock;
 import fr.natixe.grimmod.client.utils.ModCreativeTab;
 import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
@@ -39,12 +40,16 @@ public class ModBlocks {
     public static final RegistryObject<Block> INDIGOT_BLOCK = registerBlock("indigot_block",
             () -> new Block(AbstractBlock.Properties.of(Material.STONE)
                     .strength(3f, 15f).harvestTool(ToolType.PICKAXE).requiresCorrectToolForDrops()));
+
+    /*Mud Block*/
+
     public static final RegistryObject<Block> MUD_SOIL = registerBlock("mud_soil",
             () -> new Block(AbstractBlock.Properties.of(Material.STONE)
-                    .strength(3f, 15f).harvestTool(ToolType.PICKAXE).requiresCorrectToolForDrops()));
+                    .strength(0.6f)));
     public static final RegistryObject<Block> MUD_SOIL_GRASS = registerBlock("mud_soil_grass",
             () -> new Block(AbstractBlock.Properties.of(Material.STONE)
-                    .strength(3f, 15f).harvestTool(ToolType.PICKAXE).requiresCorrectToolForDrops()));
+                    .strength(0.6f)));
+
 
     /*Quartz Block*/
 
@@ -67,25 +72,28 @@ public class ModBlocks {
     /*Charred Block*/
 
     public static final RegistryObject<Block> CHARRED_DIRT = registerBlock("charred_dirt",
-            () -> new Block(AbstractBlock.Properties.of(Material.DIRT)
-                    .strength(0.7F, 1F).harvestTool(ToolType.SHOVEL)));
+            () -> new Block(AbstractBlock.Properties.of(Material.DIRT).harvestTool(ToolType.SHOVEL)
+                    .strength(0.7F)));
     public static final RegistryObject<Block> CHARRED_GRASS = registerBlock("charred_grass",
-            () -> new Block(AbstractBlock.Properties.of(Material.DIRT)
-                    .strength(0.8F, 1F).harvestTool(ToolType.SHOVEL)));
+            () -> new Block(AbstractBlock.Properties.of(Material.DIRT).harvestTool(ToolType.SHOVEL)
+                    .strength(0.8F)));
     public static final RegistryObject<Block> CHARRED_LOG = registerBlock("charred_log",
             () -> new RotatedPillarBlock(AbstractBlock.Properties.of(Material.WOOD)
-                    .strength(2.0F, 3.0F).harvestTool(ToolType.AXE)));
+                    .strength(2.2F, 3.3F).harvestTool(ToolType.AXE)));
     public static final RegistryObject<Block> CHARRED_PLANKS = registerBlock("charred_planks",
-            () -> new Block(AbstractBlock.Properties.of(Material.WOOD)
-                    .strength(2.0F, 3.0F).harvestTool(ToolType.AXE)));
+            () -> new Block(AbstractBlock.Properties.of(Material.WOOD).harvestTool(ToolType.AXE)
+                    .strength(2.2F, 3.3F).harvestTool(ToolType.AXE)));
     public static final RegistryObject<Block> CHARRED_DIRT_EMBERS = registerBlock("charred_dirt_embers",
-            () -> new BurntSoil(AbstractBlock.Properties.of(Material.DIRT)
-                    .strength(1F, 1.5F).harvestTool(ToolType.SHOVEL)));
+            () -> new BurntSoil(AbstractBlock.Properties.of(Material.DIRT).harvestTool(ToolType.SHOVEL)
+                    .strength(1F)));
     public static final RegistryObject<StairsBlock> CHARRED_STAIRS = registerBlock("charred_stairs",
             () -> new StairsBlock(() -> CHARRED_PLANKS.get().defaultBlockState(),
-                    AbstractBlock.Properties.of(Material.WOOD)
-                            .harvestTool(ToolType.AXE).strength(2.0F, 3.0F)));
-
+                    AbstractBlock.Properties.of(Material.WOOD).harvestTool(ToolType.AXE)
+                            .strength(2.2F, 3.3F)));
+    public static final RegistryObject<Block> CHARRED_FARMLAND = registerBlock("charred_farmland",
+            () -> new CharredFarmLandBlock(AbstractBlock.Properties.of(Material.DIRT)
+                    .strength(0.8F).sound(SoundType.GRAVEL).harvestTool(ToolType.SHOVEL)
+                    .isViewBlocking(ModBlocks::always).isSuffocating(ModBlocks::always)));
 
 
 

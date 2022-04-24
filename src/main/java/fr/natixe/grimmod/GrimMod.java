@@ -29,10 +29,6 @@ public class GrimMod {
     public GrimMod() {
         IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
 
-      //  FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
-      //  FMLJavaModLoadingContext.get().getModEventBus().addListener(this::clientSetup);
-
-
         ModItems.register(bus);
         ModBlocks.register(bus);
         bus.addListener(this::setup);
@@ -75,10 +71,6 @@ public class GrimMod {
         LOGGER.info("HELLO from server starting");
     }
 
-    //private void clientSetup(final FMLClientSetupEvent event) {
-    //    IEventBus eventBus = MinecraftForge.EVENT_BUS;
-
-    //}
 
     @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
     public static class RegistryEvents {

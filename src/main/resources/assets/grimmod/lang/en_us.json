@@ -10,5 +10,13 @@
   "block.grimmod.shadow_indigot_block": "Shadow Indigot",
   "block.grimmod.indigot_block": "Shadow Indigot",
   "block.grimmod.mud_soil": "Mud Soil",
-  "block.grimmod.mud_soil_grass": "Muddy grass block"
+  "block.grimmod.mud_soil_grass": "Muddy grass block",
+  "block.grimmod.charred_dirt": "Charred Dirt",
+  "block.grimmod.charred_grass": "Charred Grass",
+  "block.grimmod.charred_log": "Charred Log",
+  "block.grimmod.charred_planks": "Charred Planks",
+  "block.grimmod.charred_dirt_embers": "Charred Dirt Embres",
+  "block.grimmod.charred_stairs": "Charred Stairs",
+  "block.grimmod.charred_farmland": "Charred FarmLand"
+
 }

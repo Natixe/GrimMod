@@ -10,5 +10,12 @@
   "block.grimmod.shadow_indigot_block": "Block Indigot De L'ombre",
   "block.grimmod.indigot_block": "Block Indigot",
   "block.grimmod.mud_soil": "Sol boueux",
-  "block.grimmod.mud_soil_grass": "Bloc D'Herbe Boueuse"
+  "block.grimmod.mud_soil_grass": "Block D'Herbe Boueuse",
+  "block.grimmod.charred_dirt": "Block de Terre Carbonisé",
+  "block.grimmod.charred_grass": "Block de Herbe Carbonisé",
+  "block.grimmod.charred_log": "Tron Carbonisé",
+  "block.grimmod.charred_planks": "Bois Carbonisé",
+  "block.grimmod.charred_dirt_embers": "Block de Terre Embraser",
+  "block.grimmod.charred_stairs": "Escalise Carbonisé",
+  "block.grimmod.charred_farmland": "Terre Carbonisé"
 }

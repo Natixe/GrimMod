@@ -12,10 +12,6 @@ public class ModArmorDamoclesHelmetImplementation extends DamoclesHelmet {
 
     @Override
     public void setupArmorParts() {
-        //You need to cut out some parts from Blockbenchs exported model, and paste them here.
-        //You can see 2 examples of how this may look, adding a cube to the head
-        //and a rotated cube on the chest
-        //Export the unedited armor template to see which parts you should **not** copy over
 
         bone1.setPos(0.0F, 24.0F, 0.0F);
         bone1.texOffs(15, 39).addBox(-1.0F, -34.0F, 6.0F, 1.0F, 1.0F, 1.0F, 0.0F, false);

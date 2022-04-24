@@ -18,8 +18,12 @@ public class ModBlockLootTables extends BlockLootTables {
         this.dropSelf(ModBlocks.NEW_ICE_PACKED.get());
         this.dropSelf(ModBlocks.SHADOW_INDIGOT_BLOCK.get());
         this.dropSelf(ModBlocks.INDIGOT_BLOCK.get());
+
+        /*Mud Block*/
         this.dropSelf(ModBlocks.MUD_SOIL.get());
-        this.dropSelf(ModBlocks.MUD_SOIL_GRASS.get());
+        this.add(ModBlocks.MUD_SOIL_GRASS.get(), (p_218529_0_) -> {
+            return createSingleItemTableWithSilkTouch(p_218529_0_, ModBlocks.MUD_SOIL.get());
+        });
 
         /*Quartz*/
 
@@ -36,6 +40,9 @@ public class ModBlockLootTables extends BlockLootTables {
         this.dropSelf(ModBlocks.CHARRED_DIRT_EMBERS.get());
         this.dropSelf(ModBlocks.CHARRED_STAIRS.get());
         this.add(ModBlocks.CHARRED_GRASS.get(), (p_218529_0_) -> {
+            return createSingleItemTableWithSilkTouch(p_218529_0_, ModBlocks.CHARRED_DIRT.get());
+        });
+        this.add(ModBlocks.CHARRED_FARMLAND.get(), (p_218529_0_) -> {
             return createSingleItemTableWithSilkTouch(p_218529_0_, ModBlocks.CHARRED_DIRT.get());
         });
     }
