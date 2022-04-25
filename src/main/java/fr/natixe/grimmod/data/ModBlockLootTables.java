@@ -55,6 +55,8 @@ public class ModBlockLootTables extends BlockLootTables implements Consumer<BiCo
         this.dropSelf(ModBlocks.SAVANNAH_BLOCK.get());
         this.dropSelf(ModBlocks.SAVANNAH_BLOCK_DRY.get());
         this.dropSelf(ModBlocks.SAVANNAH_BLOCK_MOSSY.get());
+        this.dropSelf(ModBlocks.SAVANNAH_LOG.get());
+        this.dropSelf(ModBlocks.SAVANNAH_PLANKS.get());
         this.add(ModBlocks.SAVANNAH_GRASS_BLOCK.get(), (p_218529_0_) -> {
             return createSingleItemTableWithSilkTouch(p_218529_0_, ModBlocks.SAVANNAH_BLOCK.get());
         });

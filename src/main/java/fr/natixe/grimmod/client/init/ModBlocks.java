@@ -112,6 +112,13 @@ public class ModBlocks {
                     .strength(0.7F)));
     public static final RegistryObject<Block> SAVANNAH_LEAVES = registerBlock("savannah_leaves",
             () -> leaves());
+    public static final RegistryObject<Block> SAVANNAH_LOG = registerBlock("savannah_log",
+            () -> new RotatedPillarBlock(AbstractBlock.Properties.of(Material.WOOD)
+                    .strength(2.2F, 3.3F).harvestTool(ToolType.AXE)));
+    public static final RegistryObject<Block> SAVANNAH_PLANKS = registerBlock("savannah_planks",
+            () -> new Block(AbstractBlock.Properties.of(Material.WOOD).harvestTool(ToolType.AXE)
+                    .strength(2.2F, 3.3F).harvestTool(ToolType.AXE)));
+
 
 
 
