@@ -26,15 +26,6 @@ public class ModItems {
 
     //Full stuff in DAMOCLES_ARMOR
 
-   // public static final RegistryObject<Item> DAMOCLES_HELMET = ITEMS.register("damolces_helmet",
-         //  () -> new ModArmorItem(material, slotType, properties, () -> ItemArmorRegistration::getFirstArmor));
-           // () -> new ArmorItem(ModArmorMaterials.DAMOCLES_ARMOR, EquipmentSlotType.HEAD,
-           //         new Item.Properties().tab(ModCreativeTab.ARMOR_3D)));
-    //public static final RegistryObject<Item> DAMOCLES_HELMET = ITEMS.register("damolces_helmet",
-    //         () -> new ModArmorItem(ModArmorMaterials.DAMOCLES_ARMOR,EquipmentSlotType.HEAD,
-    //              new Item.Properties().tab(ModCreativeTab.ARMOR_3D),new DamoclesHelmet()) );
-
-
    public static final RegistryObject<Item> DAMOCLES_HELMET = ITEMS.register("damocles_helmet",
             () -> new ModArmorItem(ModArmorMaterials.DAMOCLES_ARMOR, EquipmentSlotType.HEAD,
                    new Item.Properties().tab(ModCreativeTab.ARMOR_3D),
@@ -45,9 +36,13 @@ public class ModItems {
    public static final RegistryObject<Item> DAMOCLES_CHESTPLATE = ITEMS.register("damolces_chestplate",
             () -> new ArmorItem(ModArmorMaterials.DAMOCLES_ARMOR, EquipmentSlotType.CHEST,
                     new Item.Properties().tab(ModCreativeTab.ARMOR_3D)));
+
+
     public static final RegistryObject<Item> DAMOCLES_LEGGING = ITEMS.register("damolces_leggings",
             () -> new ArmorItem(ModArmorMaterials.DAMOCLES_ARMOR, EquipmentSlotType.LEGS,
                     new Item.Properties().tab(ModCreativeTab.ARMOR_3D)));
+
+
     public static final RegistryObject<Item> DAMOCLES_BOOTS = ITEMS.register("damolces_boots",
             () -> new ArmorItem(ModArmorMaterials.DAMOCLES_ARMOR, EquipmentSlotType.FEET,
                     new Item.Properties().tab(ModCreativeTab.ARMOR_3D)));

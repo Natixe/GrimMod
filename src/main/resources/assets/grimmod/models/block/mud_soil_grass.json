@@ -13,8 +13,15 @@
         "texture": "#msb",
         "rotation": 90
       },
+      "down": {
+        "texture": "#msb"
+      },
       "up": {
         "texture": "#msgt"
+      },
+      "up": {
+        "texture": "#msgt",
+        "rotation": 90
       },
       "north": {
         "texture": "#msgs"

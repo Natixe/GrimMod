@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/leaves",
+  "textures": {
+    "all": "grimmod:block/savannah_leaves"
+  }
+}

@@ -1,39 +1,38 @@
 {
   "textures": {
-    "particle": "grimmod:block/charred_grass_block_side",
-    "cgbt": "grimmod:block/charred_grass_block_top",
-    "cgbs": "grimmod:block/charred_grass_block_side",
-    "cd": "grimmod:block/charred_dirt"
+    "particle": "grimmod:block/mud_soil_bottom",
+    "sb": "grimmod:block/savannah_block",
+    "sbm": "grimmod:block/savannah_block_mossy"
   },
   "elements": [{
     "from": [0, 0, 0],
     "to": [16, 16, 16],
     "faces": {
       "down": {
-        "texture": "#cd",
+        "texture": "#sb",
         "rotation": 90
       },
       "down": {
-        "texture": "#cd"
+        "texture": "#sb"
       },
       "up": {
-        "texture": "#cgbt"
+        "texture": "#sb"
       },
       "up": {
-        "texture": "#cgbt",
+        "texture": "#sb",
         "rotation": 90
       },
       "north": {
-        "texture": "#cgbs"
+        "texture": "#sbm"
       },
       "south": {
-        "texture": "#cgbs"
+        "texture": "#sbm"
       },
       "west": {
-        "texture": "#cgbs"
+        "texture": "#sbm"
       },
       "east": {
-        "texture": "#cgbs"
+        "texture": "#sbm"
       }
     }
   }],

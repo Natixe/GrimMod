@@ -17,5 +17,10 @@
   "block.grimmod.charred_planks": "Bois Carbonisé",
   "block.grimmod.charred_dirt_embers": "Block de Terre Embraser",
   "block.grimmod.charred_stairs": "Escalise Carbonisé",
-  "block.grimmod.charred_farmland": "Terre Carbonisé"
+  "block.grimmod.charred_farmland": "Terre Carbonisé",
+  "block.grimmod.savannah_grass_block": "Block D'herbe de Savane",
+  "block.grimmod.savannah_block": "Block de Savane",
+  "block.grimmod.savannah_block_dry": "Block de Savane Sec",
+  "block.grimmod.savannah_block_mossy": "Block de Savane Moussue",
+  "block.grimmod.savannah_leaves": "Feuille de la Savane"
 }

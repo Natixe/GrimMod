@@ -17,6 +17,11 @@
   "block.grimmod.charred_planks": "Charred Planks",
   "block.grimmod.charred_dirt_embers": "Charred Dirt Embres",
   "block.grimmod.charred_stairs": "Charred Stairs",
-  "block.grimmod.charred_farmland": "Charred FarmLand"
+  "block.grimmod.charred_farmland": "Charred FarmLand",
+  "block.grimmod.savannah_grass_block": "Savannah Grass Block",
+  "block.grimmod.savannah_block": "Savannah Block",
+  "block.grimmod.savannah_block_dry": "Savannah Block dry",
+  "block.grimmod.savannah_block_mossy": "Savannah Block Mossy",
+  "block.grimmod.savannah_leaves": "Savannah Leaves"
 
 }

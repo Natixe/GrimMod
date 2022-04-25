@@ -2,13 +2,18 @@ package fr.natixe.grimmod.data;
 
 import fr.natixe.grimmod.client.init.ModBlocks;
 import net.minecraft.block.Block;
-import net.minecraft.block.Blocks;
 import net.minecraft.data.loot.BlockLootTables;
+import net.minecraft.loot.LootTable;
+import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.RegistryObject;
-
+import java.util.function.BiConsumer;
+import java.util.function.Consumer;
 import java.util.stream.Collectors;
 
-public class ModBlockLootTables extends BlockLootTables {
+public class ModBlockLootTables extends BlockLootTables implements Consumer<BiConsumer<ResourceLocation, LootTable.Builder>> {
+    private static final float[] NORMAL_LEAVES_SAPLING_CHANCES = new float[]{0.05F, 0.0625F, 0.083333336F, 0.1F};
+
+
     @Override
     protected void addTables() {
 
@@ -45,9 +50,23 @@ public class ModBlockLootTables extends BlockLootTables {
         this.add(ModBlocks.CHARRED_FARMLAND.get(), (p_218529_0_) -> {
             return createSingleItemTableWithSilkTouch(p_218529_0_, ModBlocks.CHARRED_DIRT.get());
         });
+
+        /*Savannah Block*/
+        this.dropSelf(ModBlocks.SAVANNAH_BLOCK.get());
+        this.dropSelf(ModBlocks.SAVANNAH_BLOCK_DRY.get());
+        this.dropSelf(ModBlocks.SAVANNAH_BLOCK_MOSSY.get());
+        this.add(ModBlocks.SAVANNAH_GRASS_BLOCK.get(), (p_218529_0_) -> {
+            return createSingleItemTableWithSilkTouch(p_218529_0_, ModBlocks.SAVANNAH_BLOCK.get());
+        });
+        this.add(ModBlocks.SAVANNAH_LEAVES.get(), (p_218473_0_) -> {
+            return createLeavesDrops(p_218473_0_, ModBlocks.SAVANNAH_LEAVES.get(), NORMAL_LEAVES_SAPLING_CHANCES);
+        });
+
+
     }
 
-        @Override
+
+    @Override
         protected Iterable<Block> getKnownBlocks() {
         return ModBlocks.BLOCKS.getEntries().stream()
                 .map(RegistryObject::get)

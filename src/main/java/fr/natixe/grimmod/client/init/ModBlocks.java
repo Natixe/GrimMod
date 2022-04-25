@@ -6,6 +6,7 @@ import fr.natixe.grimmod.client.init.block.CharredFarmLandBlock;
 import fr.natixe.grimmod.client.utils.ModCreativeTab;
 import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
+import net.minecraft.entity.EntityType;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.util.math.BlockPos;
@@ -95,6 +96,24 @@ public class ModBlocks {
                     .strength(0.8F).sound(SoundType.GRAVEL).harvestTool(ToolType.SHOVEL)
                     .isViewBlocking(ModBlocks::always).isSuffocating(ModBlocks::always)));
 
+    /*Savannah Block*/
+
+    public static final RegistryObject<Block> SAVANNAH_GRASS_BLOCK = registerBlock("savannah_grass_block",
+            () -> new Block(AbstractBlock.Properties.of(Material.DIRT).harvestTool(ToolType.SHOVEL)
+                    .strength(0.8F)));
+    public static final RegistryObject<Block> SAVANNAH_BLOCK = registerBlock("savannah_block",
+            () -> new Block(AbstractBlock.Properties.of(Material.DIRT).harvestTool(ToolType.SHOVEL)
+                    .strength(0.7F)));
+    public static final RegistryObject<Block> SAVANNAH_BLOCK_DRY = registerBlock("savannah_block_dry",
+            () -> new Block(AbstractBlock.Properties.of(Material.DIRT).harvestTool(ToolType.SHOVEL)
+                    .strength(0.7F)));
+    public static final RegistryObject<Block> SAVANNAH_BLOCK_MOSSY = registerBlock("savannah_block_mossy",
+            () -> new Block(AbstractBlock.Properties.of(Material.DIRT).harvestTool(ToolType.SHOVEL)
+                    .strength(0.7F)));
+    public static final RegistryObject<Block> SAVANNAH_LEAVES = registerBlock("savannah_leaves",
+            () -> leaves());
+
+
 
 
 
@@ -111,6 +130,18 @@ public class ModBlocks {
 
     private static boolean always(BlockState p_235426_0_, IBlockReader p_235426_1_, BlockPos p_235426_2_) {
         return true;
+    }
+
+    private static LeavesBlock leaves() {
+        return new LeavesBlock(AbstractBlock.Properties.of(Material.LEAVES).strength(0.2F).randomTicks().sound(SoundType.GRASS).noOcclusion().isValidSpawn(ModBlocks::ocelotOrParrot).isSuffocating(ModBlocks::never).isViewBlocking(ModBlocks::never));
+    }
+
+    private static Boolean ocelotOrParrot(BlockState p_235441_0_, IBlockReader p_235441_1_, BlockPos p_235441_2_, EntityType<?> p_235441_3_) {
+        return p_235441_3_ == EntityType.OCELOT || p_235441_3_ == EntityType.PARROT;
+    }
+
+    private static boolean never(BlockState p_235436_0_, IBlockReader p_235436_1_, BlockPos p_235436_2_) {
+        return false;
     }
 
     public static void register(IEventBus bus) {

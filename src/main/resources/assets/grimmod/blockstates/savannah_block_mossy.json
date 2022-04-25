@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+        "model": "grimmod:block/savannah_block_mossy"
+    }
+  }
+}
