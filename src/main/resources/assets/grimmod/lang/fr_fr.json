@@ -22,5 +22,8 @@
   "block.grimmod.savannah_block": "Block de Savane",
   "block.grimmod.savannah_block_dry": "Block de Savane Sec",
   "block.grimmod.savannah_block_mossy": "Block de Savane Moussue",
-  "block.grimmod.savannah_leaves": "Feuille de la Savane"
+  "block.grimmod.savannah_leaves": "Feuille de Savane",
+  "block.grimmod.savannah_mud": "Boue de Savane",
+  "block.grimmod.savannah_mud_grassy": "Boue de Savannah herbeuse",
+  "block.grimmod.savannah_dense_mud_grassy": "Boue de Savannah dense herbeuse"
 }

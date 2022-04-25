@@ -118,9 +118,15 @@ public class ModBlocks {
     public static final RegistryObject<Block> SAVANNAH_PLANKS = registerBlock("savannah_planks",
             () -> new Block(AbstractBlock.Properties.of(Material.WOOD).harvestTool(ToolType.AXE)
                     .strength(2.2F, 3.3F).harvestTool(ToolType.AXE)));
-
-
-
+    public static final RegistryObject<Block> SAVANNAH_MUD = registerBlock("savannah_mud",
+            () -> new Block(AbstractBlock.Properties.of(Material.DIRT).harvestTool(ToolType.SHOVEL)
+                    .strength(0.7F)));
+    public static final RegistryObject<Block> SAVANNAH_MUD_GRASSY = registerBlock("savannah_mud_grassy",
+            () -> new Block(AbstractBlock.Properties.of(Material.DIRT).harvestTool(ToolType.SHOVEL)
+                    .strength(0.7F)));
+    public static final RegistryObject<Block> SAVANNAH_DENSE_MUD_GRASSY = registerBlock("savannah_dense_mud_grassy",
+            () -> new Block(AbstractBlock.Properties.of(Material.DIRT).harvestTool(ToolType.SHOVEL)
+                    .strength(0.7F)));
 
 
 

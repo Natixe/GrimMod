@@ -22,6 +22,8 @@
   "block.grimmod.savannah_block": "Savannah Block",
   "block.grimmod.savannah_block_dry": "Savannah Block dry",
   "block.grimmod.savannah_block_mossy": "Savannah Block Mossy",
-  "block.grimmod.savannah_leaves": "Savannah Leaves"
-
+  "block.grimmod.savannah_leaves": "Savannah Leaves",
+  "block.grimmod.savannah_mud": "Savannah Mud",
+  "block.grimmod.savannah_mud_grassy": "Savannah Mud Grassy",
+  "block.grimmod.savannah_dense_mud_grassy": "Savannah Dense Mud Grassy"
 }

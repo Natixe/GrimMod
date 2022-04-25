@@ -1,0 +1,21 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "grimmod:block/savannah_mud_grassy"
+      },
+      {
+        "model": "grimmod:block/savannah_mud_grassy",
+        "y": 90
+      },
+      {
+        "model": "grimmod:block/savannah_mud_grassy",
+        "y": 180
+      },
+      {
+        "model": "grimmod:block/savannah_mud_grassy",
+        "y": 270
+      }
+    ]
+  }
+}

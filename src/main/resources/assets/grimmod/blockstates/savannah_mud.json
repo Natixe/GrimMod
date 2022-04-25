@@ -1,0 +1,33 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "grimmod:block/savannah_mud"
+      },
+      {
+        "model": "grimmod:block/savannah_mud",
+        "y": 90
+      },
+      {
+        "model": "grimmod:block/savannah_mud",
+        "y": 180
+      },
+      {
+        "model": "grimmod:block/savannah_mud",
+        "y": 270
+      },
+      {
+        "model": "grimmod:block/savannah_mud",
+        "x": 90
+      },
+      {
+        "model": "grimmod:block/savannah_mud",
+        "x": 180
+      },
+      {
+        "model": "grimmod:block/savannah_mud",
+        "x": 270
+      }
+    ]
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "textures": {
+    "particle": "grimmod:block/savannah_dense_grassy_mud_top",
+    "sdgmt": "grimmod:block/savannah_dense_grassy_mud_top",
+    "sdgms": "grimmod:block/savannah_mud_grass_side",
+    "sm": "grimmod:block/savannah_mud"
+  },
+  "elements": [{
+    "from": [0, 0, 0],
+    "to": [16, 16, 16],
+    "faces": {
+      "down": {
+        "texture": "#sm",
+        "rotation": 90
+      },
+      "down": {
+        "texture": "#sm"
+      },
+      "up": {
+        "texture": "#sdgmt"
+      },
+      "up": {
+        "texture": "#sdgmt",
+        "rotation": 90
+      },
+      "north": {
+        "texture": "#sdgms"
+      },
+      "south": {
+        "texture": "#sdgms"
+      },
+      "west": {
+        "texture": "#sdgms"
+      },
+      "east": {
+        "texture": "#sdgms"
+      }
+    }
+  }],
+  "display": {
+    "gui": {
+      "rotation": [30, 143, 0],
+      "scale": [0.625, 0.625,0.625]
+    },
+    "firstperson_righthand": {
+      "rotation": [0, 47, 0],
+      "scale": [0.4, 0.4, 0.4]
+    },
+    "thirdperson_righthand": {
+      "rotation": [75, 47, 0],
+      "translation": [0, 2.5, 0],
+      "scale": [0.375, 0.375, 0.375]
+    },
+    "ground": {
+      "rotation": [9, 0, -7],
+      "translation": [0, 3, 0],
+      "scale": [0.27, 0.27, 0.27]
+    },
+    "fixed" : {
+      "scale": [0.55, 0.55, 0.55]
+    }
+  }
+}
