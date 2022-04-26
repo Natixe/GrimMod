@@ -4,6 +4,8 @@ import fr.natixe.grimmod.client.init.ModBlocks;
 import fr.natixe.grimmod.client.init.ModItems;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
+import net.minecraft.client.renderer.RenderType;
+import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -44,13 +46,11 @@ public class GrimMod {
     }
 
     private void setup(final FMLCommonSetupEvent event) {
-        // some preinit code
-        LOGGER.info("HELLO FROM PREINIT");
-        LOGGER.info("DIRT BLOCK >> {}", Blocks.DIRT.getRegistryName());
+
     }
 
     private void doClientStuff(final FMLClientSetupEvent event) {
-        // do something that can only be done on the client
+        RenderTypeLookup.setRenderLayer(ModBlocks.DEATH_SING.get(), RenderType.cutout());
     }
 
     private void enqueueIMC(final InterModEnqueueEvent event) {

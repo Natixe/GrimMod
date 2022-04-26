@@ -25,6 +25,12 @@ public class ModBlocks {
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, GrimMod.MODID);
 
 
+
+    /*Special Block*/
+    public static final RegistryObject<Block> DEATH_SING = registerBlock("death_sign",
+            () ->  new Block(AbstractBlock.Properties.of(Material.WOOD)
+                    .strength(1f).noOcclusion()));
+
     /*Randome Block*/
     public static final RegistryObject<Block> BLUE_MOSSY_COBBLESTONE = registerBlock("blue_mossy_cobblestone",
             () -> new Block(AbstractBlock.Properties.of(Material.STONE)
@@ -50,7 +56,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> MUD_SOIL_GRASS = registerBlock("mud_soil_grass",
             () -> new Block(AbstractBlock.Properties.of(Material.STONE)
                     .strength(0.6f)));
-
+    //https://wwws.airfrance.fr/trip/overview/trip-details/7efeec6e-111a-4ce1-a8ba-e1b87b5c5fca
 
     /*Quartz Block*/
 

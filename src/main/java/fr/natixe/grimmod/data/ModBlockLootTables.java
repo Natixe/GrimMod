@@ -23,6 +23,7 @@ public class ModBlockLootTables extends BlockLootTables implements Consumer<BiCo
         this.dropSelf(ModBlocks.NEW_ICE_PACKED.get());
         this.dropSelf(ModBlocks.SHADOW_INDIGOT_BLOCK.get());
         this.dropSelf(ModBlocks.INDIGOT_BLOCK.get());
+        this.dropSelf(ModBlocks.DEATH_SING.get());
 
         /*Mud Block*/
         this.dropSelf(ModBlocks.MUD_SOIL.get());
@@ -61,6 +62,9 @@ public class ModBlockLootTables extends BlockLootTables implements Consumer<BiCo
             return createSingleItemTableWithSilkTouch(p_218529_0_, ModBlocks.SAVANNAH_BLOCK.get());
         });
         this.add(ModBlocks.SAVANNAH_MUD_GRASSY.get(), (p_218529_0_) -> {
+            return createSingleItemTableWithSilkTouch(p_218529_0_, ModBlocks.SAVANNAH_MUD.get());
+        });
+        this.add(ModBlocks.SAVANNAH_DENSE_MUD_GRASSY.get(), (p_218529_0_) -> {
             return createSingleItemTableWithSilkTouch(p_218529_0_, ModBlocks.SAVANNAH_MUD.get());
         });
         this.add(ModBlocks.SAVANNAH_MUD.get(), (p_218529_0_) -> {
