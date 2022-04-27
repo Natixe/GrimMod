@@ -1,0 +1,82 @@
+{
+  "parent": "iron_golden_chains",
+  "textures": {
+    "particle": "grimmod:block/iron_golden_chains",
+    "1": "grimmod:block/iron_golden_chains"
+  },
+  "elements": [
+    {
+      "from": [8.59358, 0, 1.30485],
+      "to": [12.90693, 16, 1.37556],
+      "rotation": {"angle": -45, "axis": "y", "origin": [1.33604, 0, 1.35025]},
+      "faces": {
+        "north": {"uv": [4, 0, 11.83, 16], "texture": "#1"},
+        "east": {"uv": [4, 0, 4.83, 16], "texture": "#1"},
+        "south": {"uv": [4, 0, 11.93, 16], "texture": "#1"},
+        "west": {"uv": [4, 0, 4.83, 16], "texture": "#1"},
+        "up": {"uv": [4.1, 12.1, 12.13, 12.45], "texture": "#1", "cullface": "up"},
+        "down": {"uv": [4.2, 15.5, 11.93, 16], "texture": "#1", "cullface": "down"}
+      }
+    },
+    {
+      "from": [7.55018, 0, 10.08737],
+      "to": [11.86354, 16, 10.15808],
+      "rotation": {"angle": 45, "axis": "y", "origin": [6.29107, 0, 11.12173]},
+      "faces": {
+        "north": {"uv": [4, 0, 11.83, 16], "texture": "#1"},
+        "east": {"uv": [4, 0, 4.83, 16], "texture": "#1"},
+        "south": {"uv": [4, 0, 11.83, 16], "texture": "#1"},
+        "west": {"uv": [4, 0, 4.83, 16], "texture": "#1"},
+        "up": {"uv": [4.2, 12, 11.93, 12.5], "texture": "#1", "cullface": "up"},
+        "down": {"uv": [4.2, 15.5, 12.03, 16], "texture": "#1", "cullface": "down"}
+      }
+    }
+  ],
+  "display": {
+    "thirdperson_righthand": {
+      "rotation": [76, 4, 4],
+      "translation": [0, 0.3, 0.25],
+      "scale": [0.5, 0.5, 0.5]
+    },
+    "thirdperson_lefthand": {
+      "rotation": [75, 45, 0],
+      "translation": [0, 0.25, 0.25],
+      "scale": [0.5, 0.5, 0.5]
+    },
+    "firstperson_righthand": {
+      "rotation": [0, 45, 0],
+      "scale": [0.4, 0.4, 0.4]
+    },
+    "firstperson_lefthand": {
+      "rotation": [0, 225, 0],
+      "scale": [0.4, 0.4, 0.4]
+    },
+    "ground": {
+      "rotation": [0, 0, 18],
+      "translation": [0, 5, 0],
+      "scale": [1.2, 1.2, 1.2]
+    },
+    "gui": {
+      "rotation": [0, 0, -37],
+      "translation": [-0.75, 0, 0]
+    },
+    "head": {
+      "rotation": [0, 0, 90],
+      "translation": [0, 5.4, -7.25]
+    },
+    "fixed": {
+      "rotation": [0, 0, 46],
+      "scale": [1.2, 1.2, 1.2]
+    }
+  },
+  "groups": [
+    {
+      "name": "Chain1",
+      "origin": [8, 8, 8],
+      "color": 0,
+      "nbt": "{}",
+      "armAnimationEnabled": false,
+      "children": [0, 1]
+    }
+  ]
+}

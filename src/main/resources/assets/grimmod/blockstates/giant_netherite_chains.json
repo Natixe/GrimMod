@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "grimmod:block/giant_netherite_chains",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "grimmod:block/giant_netherite_chains"
+    },
+    "axis=z": {
+      "model": "grimmod:block/giant_netherite_chains",
+      "x": 90
+    }
+  }
+}

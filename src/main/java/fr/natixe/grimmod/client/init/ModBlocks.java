@@ -6,6 +6,7 @@ import fr.natixe.grimmod.client.init.block.CharredFarmLandBlock;
 import fr.natixe.grimmod.client.utils.ModCreativeTab;
 import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
+import net.minecraft.block.material.MaterialColor;
 import net.minecraft.entity.EntityType;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
@@ -30,6 +31,21 @@ public class ModBlocks {
     public static final RegistryObject<Block> DEATH_SING = registerBlock("death_sign",
             () ->  new Block(AbstractBlock.Properties.of(Material.WOOD)
                     .strength(1f).noOcclusion()));
+
+    /*Chain Block*/
+
+    public static final RegistryObject<Block> GIANT_GOLDEN_CHAINS = registerBlock("giant_golden_chains",
+            () ->  new ChainBlock(AbstractBlock.Properties.of(Material.METAL, MaterialColor.NONE).requiresCorrectToolForDrops().strength(5.0F, 6.0F).sound(SoundType.CHAIN).noOcclusion()));
+
+    public static final RegistryObject<Block> GIANT_NETHERITE_CHAINS = registerBlock("giant_netherite_chains",
+            () ->  new ChainBlock(AbstractBlock.Properties.of(Material.METAL, MaterialColor.NONE).requiresCorrectToolForDrops().strength(5.0F, 6.0F).sound(SoundType.CHAIN).noOcclusion()));
+
+    public static final RegistryObject<Block> IRON_GOLDEN_CHAINS = registerBlock("iron_golden_chains",
+            () ->  new ChainBlock(AbstractBlock.Properties.of(Material.METAL, MaterialColor.NONE).requiresCorrectToolForDrops().strength(5.0F, 6.0F).sound(SoundType.CHAIN).noOcclusion()));
+
+    public static final RegistryObject<Block> RUSTY_CHAINS = registerBlock("rusty_chains",
+            () ->  new ChainBlock(AbstractBlock.Properties.of(Material.METAL, MaterialColor.NONE).requiresCorrectToolForDrops().strength(5.0F, 6.0F).sound(SoundType.CHAIN).noOcclusion()));
+
 
     /*Randome Block*/
     public static final RegistryObject<Block> BLUE_MOSSY_COBBLESTONE = registerBlock("blue_mossy_cobblestone",
