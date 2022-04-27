@@ -1,8 +1,9 @@
 package fr.natixe.grimmod.client.init;
 
 import fr.natixe.grimmod.GrimMod;
-import fr.natixe.grimmod.client.init.block.BurntSoil;
-import fr.natixe.grimmod.client.init.block.CharredFarmLandBlock;
+import fr.natixe.grimmod.client.init.custom.block.BurntSoil;
+import fr.natixe.grimmod.client.init.custom.block.CharredFarmLandBlock;
+import fr.natixe.grimmod.client.init.custom.block.Sing;
 import fr.natixe.grimmod.client.utils.ModCreativeTab;
 import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
@@ -29,7 +30,7 @@ public class ModBlocks {
 
     /*Special Block*/
     public static final RegistryObject<Block> DEATH_SING = registerBlock("death_sign",
-            () ->  new Block(AbstractBlock.Properties.of(Material.WOOD)
+            () ->  new Sing(AbstractBlock.Properties.of(Material.WOOD)
                     .strength(1f).noOcclusion()));
 
     /*Chain Block*/

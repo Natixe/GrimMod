@@ -1,5 +1,6 @@
 {
   "parent": "iron_golden_chains",
+  "texture_size": [16, 32],
   "textures": {
     "particle": "grimmod:block/iron_golden_chains",
     "1": "grimmod:block/iron_golden_chains"
@@ -54,7 +55,7 @@
     "ground": {
       "rotation": [0, 0, 18],
       "translation": [0, 5, 0],
-      "scale": [1.2, 1.2, 1.2]
+      "scale": [0.8, 0.8, 0.8]
     },
     "gui": {
       "rotation": [0, 0, -37],
