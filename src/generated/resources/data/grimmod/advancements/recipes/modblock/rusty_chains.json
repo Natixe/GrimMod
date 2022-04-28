@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "grimmod:rusty_chains"
+    ]
+  },
+  "criteria": {
+    "Unlock Rusty Chain ": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "minecraft:iron_nugget"
+          },
+          {
+            "item": "minecraft:vine"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "grimmod:rusty_chains"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "Unlock Rusty Chain ",
+      "has_the_recipe"
+    ]
+  ]
+}

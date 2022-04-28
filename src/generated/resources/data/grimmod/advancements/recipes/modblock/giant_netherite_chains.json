@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "grimmod:giant_netherite_chains"
+    ]
+  },
+  "criteria": {
+    "Unlock Giant Netherite Chain ": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "minecraft:netherite_ingot"
+          },
+          {
+            "item": "minecraft:netherite_scrap"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "grimmod:giant_netherite_chains"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "Unlock Giant Netherite Chain ",
+      "has_the_recipe"
+    ]
+  ]
+}

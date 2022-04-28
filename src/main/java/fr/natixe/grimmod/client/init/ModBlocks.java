@@ -29,7 +29,7 @@ public class ModBlocks {
 
 
     /*Special Block*/
-    public static final RegistryObject<Block> DEATH_SING = registerBlock("death_sign",
+    public static final RegistryObject<Block> DEATH_SIGN = registerBlock("death_sign",
             () ->  new Sing(AbstractBlock.Properties.of(Material.WOOD)
                     .strength(1f).noOcclusion()));
 
@@ -73,7 +73,6 @@ public class ModBlocks {
     public static final RegistryObject<Block> MUD_SOIL_GRASS = registerBlock("mud_soil_grass",
             () -> new Block(AbstractBlock.Properties.of(Material.STONE)
                     .strength(0.6f)));
-    //https://wwws.airfrance.fr/trip/overview/trip-details/7efeec6e-111a-4ce1-a8ba-e1b87b5c5fca
 
     /*Quartz Block*/
 

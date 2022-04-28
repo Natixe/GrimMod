@@ -16,6 +16,55 @@ public class RecipeGenerator extends RecipeProvider {
 
     @Override
     protected void buildShapelessRecipes(Consumer<IFinishedRecipe> consumer) {
+
+
+        /*Special Block*/
+        ShapedRecipeBuilder.shaped(ModBlocks.DEATH_SIGN.get())
+                .pattern("OOO")
+                .pattern("OSO")
+                .pattern(" T ")
+                .define('O', Blocks.OAK_PLANKS)
+                .define('S', Blocks.SKELETON_SKULL)
+                .define('T', Items.STICK)
+                .unlockedBy("Unlock Death Sing", InventoryChangeTrigger.Instance.hasItems(Items.STICK, Blocks.OAK_PLANKS, Blocks.SKELETON_SKULL))
+                .save(consumer);
+
+        /*Chain Block*/
+        ShapedRecipeBuilder.shaped(ModBlocks.GIANT_GOLDEN_CHAINS.get(), 4)
+                .pattern(" N ")
+                .pattern(" I ")
+                .pattern(" N ")
+                .define('I', Items.GOLD_INGOT)
+                .define('N', Items.GOLD_NUGGET)
+                .unlockedBy("Unlock Giant Golden Chain ", InventoryChangeTrigger.Instance.hasItems(Items.GOLD_NUGGET, Items.GOLD_INGOT))
+                .save(consumer);
+        ShapedRecipeBuilder.shaped(ModBlocks.GIANT_NETHERITE_CHAINS.get(), 4)
+                .pattern(" S ")
+                .pattern(" I ")
+                .pattern(" S ")
+                .define('S', Items.NETHERITE_SCRAP)
+                .define('I', Items.NETHERITE_INGOT)
+                .unlockedBy("Unlock Giant Netherite Chain ", InventoryChangeTrigger.Instance.hasItems(Items.NETHERITE_INGOT, Items.NETHERITE_SCRAP))
+                .save(consumer);
+        ShapedRecipeBuilder.shaped(ModBlocks.IRON_GOLDEN_CHAINS.get(), 4)
+                .pattern(" N ")
+                .pattern(" O ")
+                .pattern(" N ")
+                .define('N', Items.IRON_NUGGET)
+                .define('O', Items.GOLD_INGOT)
+                .unlockedBy("Unlock Iron Golden Chain ", InventoryChangeTrigger.Instance.hasItems(Items.IRON_NUGGET, Items.GOLD_INGOT))
+                .save(consumer);
+        ShapedRecipeBuilder.shaped(ModBlocks.RUSTY_CHAINS.get(), 4)
+                .pattern(" N ")
+                .pattern(" V ")
+                .pattern(" N ")
+                .define('N', Items.IRON_NUGGET)
+                .define('V', Items.VINE)
+                .unlockedBy("Unlock Rusty Chain ", InventoryChangeTrigger.Instance.hasItems(Items.IRON_NUGGET, Items.VINE))
+                .save(consumer);
+
+
+        /*Charred Block*/
         ShapelessRecipeBuilder.shapeless(ModBlocks.CHARRED_DIRT.get())
                 .requires(Items.COAL)
                 .requires(Blocks.DIRT)
@@ -39,4 +88,14 @@ public class RecipeGenerator extends RecipeProvider {
                 .save(consumer);
     }
 
+
+    //DEATH_SIGN
+    //        GIANT_GOLDEN_CHAINS
+    //GIANT_NETHERITE_CHAINS
+    //        IRON_GOLDEN_CHAINS
+    //RUSTY_CHAINS
+    //        SAVANNAH_PLANKS
+    //SAVANNAH_DENSE_MUD_GRASSY
+    //        SAVANNAH_BLOCK_MOSSY
+    //SAVANNAH_BLOCK_DRY
 }

@@ -2,6 +2,7 @@ package fr.natixe.grimmod.data;
 
 import fr.natixe.grimmod.client.init.ModBlocks;
 import net.minecraft.block.Block;
+import net.minecraft.block.material.MaterialColor;
 import net.minecraft.data.loot.BlockLootTables;
 import net.minecraft.loot.LootTable;
 import net.minecraft.util.ResourceLocation;
@@ -23,7 +24,14 @@ public class ModBlockLootTables extends BlockLootTables implements Consumer<BiCo
         this.dropSelf(ModBlocks.NEW_ICE_PACKED.get());
         this.dropSelf(ModBlocks.SHADOW_INDIGOT_BLOCK.get());
         this.dropSelf(ModBlocks.INDIGOT_BLOCK.get());
-        this.dropSelf(ModBlocks.DEATH_SING.get());
+        this.dropSelf(ModBlocks.DEATH_SIGN.get());
+
+        /*Chain Block*/
+
+        this.dropSelf(ModBlocks.GIANT_GOLDEN_CHAINS.get());
+        this.dropSelf(ModBlocks.GIANT_NETHERITE_CHAINS.get());
+        this.dropSelf(ModBlocks.IRON_GOLDEN_CHAINS.get());
+        this.dropSelf(ModBlocks.RUSTY_CHAINS.get());
 
         /*Mud Block*/
         this.dropSelf(ModBlocks.MUD_SOIL.get());

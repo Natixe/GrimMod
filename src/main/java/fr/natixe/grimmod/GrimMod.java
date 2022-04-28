@@ -50,7 +50,7 @@ public class GrimMod {
     }
 
     private void doClientStuff(final FMLClientSetupEvent event) {
-        RenderTypeLookup.setRenderLayer(ModBlocks.DEATH_SING.get(), RenderType.cutout());
+        RenderTypeLookup.setRenderLayer(ModBlocks.DEATH_SIGN.get(), RenderType.cutout());
         RenderTypeLookup.setRenderLayer(ModBlocks.GIANT_GOLDEN_CHAINS.get(), RenderType.cutout());
         RenderTypeLookup.setRenderLayer(ModBlocks.GIANT_NETHERITE_CHAINS.get(), RenderType.cutout());
         RenderTypeLookup.setRenderLayer(ModBlocks.IRON_GOLDEN_CHAINS .get(), RenderType.cutout());

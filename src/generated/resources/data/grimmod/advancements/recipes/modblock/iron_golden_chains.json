@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "grimmod:iron_golden_chains"
+    ]
+  },
+  "criteria": {
+    "Unlock Iron Golden Chain ": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "minecraft:iron_nugget"
+          },
+          {
+            "item": "minecraft:gold_ingot"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "grimmod:iron_golden_chains"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "Unlock Iron Golden Chain ",
+      "has_the_recipe"
+    ]
+  ]
+}

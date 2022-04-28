@@ -1,5 +1,5 @@
 {
-  "parent": "iron_golden_chains",
+  "parent": "giant_golden_chains",
   "texture_size": [16, 32],
   "textures": {
     "particle": "grimmod:block/giant_golden_chains",

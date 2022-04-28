@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "OOO",
+    "OSO",
+    " T "
+  ],
+  "key": {
+    "O": {
+      "item": "minecraft:oak_planks"
+    },
+    "S": {
+      "item": "minecraft:skeleton_skull"
+    },
+    "T": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "grimmod:death_sign"
+  }
+}

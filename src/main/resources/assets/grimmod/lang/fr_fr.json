@@ -26,9 +26,14 @@
   "block.grimmod.savannah_mud": "Boue de Savane",
   "block.grimmod.savannah_mud_grassy": "Boue de Savannah herbeuse",
   "block.grimmod.savannah_dense_mud_grassy": "Boue de Savannah dense herbeuse",
+  "block.grimmod.savannah_log": "Savannah Log",
+  "block.grimmod.savannah_planks": "Savannah Planks",
   "block.grimmod.death_sign": "Panneaux de mort",
   "block.grimmod.giant_golden_chains": "Chains En Or Géant",
   "block.grimmod.giant_netherite_chains": "Chains En Netherite Géant",
   "block.grimmod.iron_golden_chains": "Chains En Or et en Fer",
-  "block.grimmod.rusty_chains": "Chains Rouillée"
+  "block.grimmod.rusty_chains": "Chains Rouillée",
+  "itemGroup.modarmor": "Mod Armor",
+  "itemGroup.modutils": "Mod Utils",
+  "itemGroup.modblock": "Mod Block"
 }

@@ -1,35 +1,31 @@
 {
-  "parent": "iron_golden_chains",
+  "credit": "Made with Blockbench",
   "texture_size": [16, 32],
   "textures": {
-    "particle": "grimmod:block/iron_golden_chains",
-    "1": "grimmod:block/iron_golden_chains"
+    "2": "grimmod:block/iron_golden_chains",
+    "particle": "grimmod:block/iron_golden_chains"
   },
   "elements": [
     {
       "from": [8.59358, 0, 1.30485],
-      "to": [12.90693, 16, 1.37556],
+      "to": [12.90693, 16, 1.30485],
       "rotation": {"angle": -45, "axis": "y", "origin": [1.33604, 0, 1.35025]},
       "faces": {
-        "north": {"uv": [4, 0, 11.83, 16], "texture": "#1"},
-        "east": {"uv": [4, 0, 4.83, 16], "texture": "#1"},
-        "south": {"uv": [4, 0, 11.93, 16], "texture": "#1"},
-        "west": {"uv": [4, 0, 4.83, 16], "texture": "#1"},
-        "up": {"uv": [4.1, 12.1, 12.13, 12.45], "texture": "#1", "cullface": "up"},
-        "down": {"uv": [4.2, 15.5, 11.93, 16], "texture": "#1", "cullface": "down"}
+        "north": {"uv": [4, 0, 12, 16], "texture": "#2"},
+        "south": {"uv": [4, 0, 12, 16], "texture": "#2"},
+        "up": {"uv": [4, 0, 12, 0.5], "texture": "#2", "cullface": "up"},
+        "down": {"uv": [4, 0, 12, 0.5], "texture": "#2", "cullface": "down"}
       }
     },
     {
       "from": [7.55018, 0, 10.08737],
-      "to": [11.86354, 16, 10.15808],
+      "to": [11.86354, 16, 10.08737],
       "rotation": {"angle": 45, "axis": "y", "origin": [6.29107, 0, 11.12173]},
       "faces": {
-        "north": {"uv": [4, 0, 11.83, 16], "texture": "#1"},
-        "east": {"uv": [4, 0, 4.83, 16], "texture": "#1"},
-        "south": {"uv": [4, 0, 11.83, 16], "texture": "#1"},
-        "west": {"uv": [4, 0, 4.83, 16], "texture": "#1"},
-        "up": {"uv": [4.2, 12, 11.93, 12.5], "texture": "#1", "cullface": "up"},
-        "down": {"uv": [4.2, 15.5, 12.03, 16], "texture": "#1", "cullface": "down"}
+        "north": {"uv": [4, 0, 12, 16], "texture": "#2"},
+        "south": {"uv": [4, 0, 12, 16], "texture": "#2"},
+        "up": {"uv": [4, 0, 12, 0.5], "texture": "#2", "cullface": "up"},
+        "down": {"uv": [4, 15.5, 11.8, 16], "texture": "#2", "cullface": "down"}
       }
     }
   ],
@@ -55,7 +51,7 @@
     "ground": {
       "rotation": [0, 0, 18],
       "translation": [0, 5, 0],
-      "scale": [0.8, 0.8, 0.8]
+      "scale": [1.2, 1.2, 1.2]
     },
     "gui": {
       "rotation": [0, 0, -37],
@@ -69,15 +65,5 @@
       "rotation": [0, 0, 46],
       "scale": [1.2, 1.2, 1.2]
     }
-  },
-  "groups": [
-    {
-      "name": "Chain1",
-      "origin": [8, 8, 8],
-      "color": 0,
-      "nbt": "{}",
-      "armAnimationEnabled": false,
-      "children": [0, 1]
-    }
-  ]
+  }
 }

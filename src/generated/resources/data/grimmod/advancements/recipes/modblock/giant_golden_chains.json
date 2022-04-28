@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "grimmod:giant_golden_chains"
+    ]
+  },
+  "criteria": {
+    "Unlock Giant Golden Chain ": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "minecraft:gold_nugget"
+          },
+          {
+            "item": "minecraft:gold_ingot"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "grimmod:giant_golden_chains"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "Unlock Giant Golden Chain ",
+      "has_the_recipe"
+    ]
+  ]
+}

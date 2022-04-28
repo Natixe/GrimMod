@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " S ",
+    " I ",
+    " S "
+  ],
+  "key": {
+    "S": {
+      "item": "minecraft:netherite_scrap"
+    },
+    "I": {
+      "item": "minecraft:netherite_ingot"
+    }
+  },
+  "result": {
+    "item": "grimmod:giant_netherite_chains",
+    "count": 4
+  }
+}

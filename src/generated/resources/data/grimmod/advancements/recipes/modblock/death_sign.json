@@ -1,0 +1,38 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "grimmod:death_sign"
+    ]
+  },
+  "criteria": {
+    "Unlock Death Sing": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "minecraft:stick"
+          },
+          {
+            "item": "minecraft:oak_planks"
+          },
+          {
+            "item": "minecraft:skeleton_skull"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "grimmod:death_sign"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "Unlock Death Sing",
+      "has_the_recipe"
+    ]
+  ]
+}
