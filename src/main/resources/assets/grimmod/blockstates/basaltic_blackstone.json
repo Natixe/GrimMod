@@ -1,0 +1,33 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "grimmod:block/basaltic_blackstone"
+      },
+      {
+        "model": "grimmod:block/basaltic_blackstone",
+        "y": 90
+      },
+      {
+        "model": "grimmod:block/basaltic_blackstone",
+        "y": 180
+      },
+      {
+        "model": "grimmod:block/basaltic_blackstone",
+        "y": 270
+      },
+      {
+        "model": "grimmod:block/basaltic_blackstone",
+        "x": 90
+      },
+      {
+        "model": "grimmod:block/basaltic_blackstone",
+        "x": 180
+      },
+      {
+        "model": "grimmod:block/basaltic_blackstone",
+        "x": 270
+      }
+    ]
+  }
+}

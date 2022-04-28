@@ -1,5 +1,6 @@
 package fr.natixe.grimmod.client.utils;
 
+import fr.natixe.grimmod.client.init.ModBlocks;
 import fr.natixe.grimmod.client.init.ModItems;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
@@ -21,7 +22,7 @@ public class ModCreativeTab {
     public static final ItemGroup MOD_BLOCK = new ItemGroup("modblock") {
         @Override
         public ItemStack makeIcon() {
-            return new ItemStack(ModItems.DAMOCLES_INGOT.get());
+            return new ItemStack(ModBlocks.DEATH_SIGN.get());
         }
     };
 

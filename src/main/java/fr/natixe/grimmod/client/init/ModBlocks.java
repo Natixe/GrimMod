@@ -150,7 +150,31 @@ public class ModBlocks {
             () -> new Block(AbstractBlock.Properties.of(Material.DIRT).harvestTool(ToolType.SHOVEL)
                     .strength(0.7F)));
 
-
+    /*Basalt Block*/
+    public static final RegistryObject<Block> BASALT_GRASS_BLOCK = registerBlock("basalt_grass_block",
+            () -> new Block(AbstractBlock.Properties.of(Material.DIRT).harvestTool(ToolType.AXE)
+                    .strength(2.2F)));
+    public static final RegistryObject<Block> BASALT_DIRT = registerBlock("basalt_dirt",
+            () -> new Block(AbstractBlock.Properties.of(Material.DIRT).harvestTool(ToolType.AXE)
+                    .strength(2.1F)));
+    public static final RegistryObject<Block> BASALT_DOOR = registerBlock("basalt_door",
+            () -> new DoorBlock(AbstractBlock.Properties.of(Material.WOOD).strength(6.0F)
+                    .sound(SoundType.WOOD).noOcclusion()));
+    public static final RegistryObject<Block> BASALT_QUADRATILES = registerBlock("basalt_quadratiles",
+            () -> new Block(AbstractBlock.Properties.of(Material.HEAVY_METAL)
+                    .strength(10F, 120F).harvestTool(ToolType.PICKAXE)));
+    public static final RegistryObject<Block> BASALT_QUADRATILES_GILDED = registerBlock("basalt_quadratiles_gilded",
+            () -> new Block(AbstractBlock.Properties.of(Material.HEAVY_METAL)
+                    .strength(20F, 240).harvestTool(ToolType.PICKAXE)));
+    public static final RegistryObject<Block> CHISILED_BASALT = registerBlock("chisiled_basalt",
+            () -> new Block(AbstractBlock.Properties.of(Material.HEAVY_METAL)
+                    .strength(10F, 120F).harvestTool(ToolType.PICKAXE)));
+    public static final RegistryObject<Block> PATTERNED_BASALT = registerBlock("patterned_basalt",
+            () -> new Block(AbstractBlock.Properties.of(Material.HEAVY_METAL)
+                    .strength(10F, 120F).harvestTool(ToolType.PICKAXE)));
+    public static final RegistryObject<Block> BASALTIC_BLACKSTONE = registerBlock("basaltic_blackstone",
+            () -> new Block(AbstractBlock.Properties.of(Material.HEAVY_METAL)
+                    .strength(5F, 60F).harvestTool(ToolType.PICKAXE)));
 
     private static <T extends Block>RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

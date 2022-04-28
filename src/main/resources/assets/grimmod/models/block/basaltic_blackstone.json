@@ -1,0 +1,126 @@
+{
+  "textures": {
+    "particle": "grimmod:block/basaltic_blackstone_top",
+    "bbt": "grimmod:block/basaltic_blackstone_top",
+    "bbs": "grimmod:block/basaltic_blackstone_side"
+  },
+  "elements": [{
+    "from": [0, 0, 0],
+    "to": [16, 16, 16],
+    "faces": {
+      "down": {
+        "texture": "#bbt"
+      },
+      "down": {
+        "texture": "#bbt",
+        "rotation": 90
+      },
+      "down": {
+        "texture": "#bbt",
+        "rotation": 180
+      },
+      "down": {
+        "texture": "#bbt",
+        "rotation": 270
+      },
+      "up": {
+        "texture": "#bbt"
+      },
+      "up": {
+        "texture": "#bbt",
+        "rotation": 90
+      },
+      "up": {
+        "texture": "#bbt",
+        "rotation": 180
+      },
+      "up": {
+        "texture": "#bbt",
+        "rotation": 270
+      },
+      "north": {
+        "texture": "#bbs"
+      },
+      "north": {
+        "texture": "#bbs",
+        "rotation": 90
+      },
+      "north": {
+        "texture": "#bbs",
+        "rotation": 180
+      },
+      "north": {
+        "texture": "#bbs",
+        "rotation": 270
+      },
+      "south": {
+        "texture": "#bbs"
+      },
+      "south": {
+        "texture": "#bbs",
+        "rotation": 90
+      },
+      "south": {
+        "texture": "#bbs",
+        "rotation": 180
+      },
+      "south": {
+        "texture": "#bbs",
+        "rotation": 270
+      },
+      "west": {
+        "texture": "#bbs"
+      },
+      "west": {
+        "texture": "#bbs",
+        "rotation": 90
+      },
+      "west": {
+        "texture": "#bbs",
+        "rotation": 180
+      },
+      "west": {
+        "texture": "#bbs",
+        "rotation": 270
+      },
+      "east": {
+        "texture": "#bbs"
+      },
+      "east": {
+        "texture": "#bbs",
+        "rotation": 90
+      },
+      "east": {
+        "texture": "#bbs",
+        "rotation": 180
+      },
+      "east": {
+        "texture": "#bbs",
+        "rotation": 270
+      }
+    }
+  }],
+  "display": {
+    "gui": {
+      "rotation": [30, 143, 0],
+      "scale": [0.625, 0.625,0.625]
+    },
+    "firstperson_righthand": {
+      "rotation": [0, 47, 0],
+      "scale": [0.4, 0.4, 0.4]
+    },
+    "thirdperson_righthand": {
+      "rotation": [75, 47, 0],
+      "translation": [0, 2.5, 0],
+      "scale": [0.375, 0.375, 0.375]
+    },
+    "ground": {
+      "rotation": [9, 0, -7],
+      "translation": [0, 3, 0],
+      "scale": [0.27, 0.27, 0.27]
+    },
+    "fixed" : {
+      "scale": [0.55, 0.55, 0.55]
+    }
+  }
+}

@@ -241,20 +241,6 @@ public abstract class DamoclesHelmet extends BipedModel<LivingEntity> {
 		if(crouching) matrixStack.translate(0, 0.2, 0);
 
 		renderChildrenOnly(this.head, matrixStack, buffer, packedLight, packedOverlay, red, green, blue, alpha);
-		renderChildrenOnly(this.head, matrixStack, buffer, packedLight, packedOverlay, red, green, blue, alpha);
-		renderChildrenOnly(this.head, matrixStack, buffer, packedLight, packedOverlay, red, green, blue, alpha);
-		renderChildrenOnly(this.head, matrixStack, buffer, packedLight, packedOverlay, red, green, blue, alpha);
-		renderChildrenOnly(this.head, matrixStack, buffer, packedLight, packedOverlay, red, green, blue, alpha);
-		renderChildrenOnly(this.head, matrixStack, buffer, packedLight, packedOverlay, red, green, blue, alpha);
-		renderChildrenOnly(this.head, matrixStack, buffer, packedLight, packedOverlay, red, green, blue, alpha);
-		renderChildrenOnly(this.head, matrixStack, buffer, packedLight, packedOverlay, red, green, blue, alpha);
-		renderChildrenOnly(this.head, matrixStack, buffer, packedLight, packedOverlay, red, green, blue, alpha);
-		renderChildrenOnly(this.head, matrixStack, buffer, packedLight, packedOverlay, red, green, blue, alpha);
-		renderChildrenOnly(this.head, matrixStack, buffer, packedLight, packedOverlay, red, green, blue, alpha);
-		renderChildrenOnly(this.head, matrixStack, buffer, packedLight, packedOverlay, red, green, blue, alpha);
-		renderChildrenOnly(this.head, matrixStack, buffer, packedLight, packedOverlay, red, green, blue, alpha);
-		renderChildrenOnly(this.head, matrixStack, buffer, packedLight, packedOverlay, red, green, blue, alpha);
-		renderChildrenOnly(this.head, matrixStack, buffer, packedLight, packedOverlay, red, green, blue, alpha);
 
 		matrixStack.popPose();
 	}

@@ -1,0 +1,33 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "grimmod:block/basalt_dirt"
+      },
+      {
+        "model": "grimmod:block/basalt_dirt",
+        "y": 90
+      },
+      {
+        "model": "grimmod:block/basalt_dirt",
+        "y": 180
+      },
+      {
+        "model": "grimmod:block/basalt_dirt",
+        "y": 270
+      },
+      {
+        "model": "grimmod:block/basalt_dirt",
+        "x": 90
+      },
+      {
+        "model": "grimmod:block/basalt_dirt",
+        "x": 180
+      },
+      {
+        "model": "grimmod:block/basalt_dirt",
+        "x": 270
+      }
+    ]
+  }
+}

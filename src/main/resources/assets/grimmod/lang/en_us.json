@@ -35,5 +35,15 @@
   "block.grimmod.rusty_chains": "Rusty Chains",
   "itemGroup.modarmor": "Mod Armor",
   "itemGroup.modutils": "Mod Utils",
-  "itemGroup.modblock": "Mod Block"
-}
+  "itemGroup.modblock": "Mod Block",
+  "block.grimmod.basalt_quadratiles": "Basalt Quadratiles",
+  "block.grimmod.basalt_quadratiles_gilded": "Basalt Quadratiles Gilded",
+  "block.grimmod.chisiled_basalt": "Chisiled Basalt",
+  "block.grimmod.patterned_basalt": "Patterned Basalt",
+  "block.grimmod.basaltic_blackstone": "Basaltic Blackstone",
+  "block.grimmod.basalt_grass_block": "Basalt Grass Block",
+  "block.grimmod.basalt_dirt": "Basalt Dirt",
+  "block.grimmod.basalt_door": "Basalt Door"
+
+
+  }

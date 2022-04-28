@@ -2,10 +2,12 @@ package fr.natixe.grimmod.data;
 
 import fr.natixe.grimmod.client.init.ModBlocks;
 import net.minecraft.block.Block;
+import net.minecraft.block.material.Material;
 import net.minecraft.block.material.MaterialColor;
 import net.minecraft.data.loot.BlockLootTables;
 import net.minecraft.loot.LootTable;
 import net.minecraft.util.ResourceLocation;
+import net.minecraftforge.common.ToolType;
 import net.minecraftforge.fml.RegistryObject;
 import java.util.function.BiConsumer;
 import java.util.function.Consumer;
@@ -81,6 +83,17 @@ public class ModBlockLootTables extends BlockLootTables implements Consumer<BiCo
         this.add(ModBlocks.SAVANNAH_LEAVES.get(), (p_218473_0_) -> {
             return createLeavesDrops(p_218473_0_, ModBlocks.SAVANNAH_LEAVES.get(), NORMAL_LEAVES_SAPLING_CHANCES);
         });
+
+        /*Basalt Block*/
+
+        this.dropSelf(ModBlocks.BASALT_GRASS_BLOCK .get());
+        this.dropSelf(ModBlocks.BASALT_DIRT.get());
+        this.dropSelf(ModBlocks.BASALT_DOOR.get());
+        this.dropSelf(ModBlocks.BASALT_QUADRATILES.get());
+        this.dropSelf(ModBlocks.BASALT_QUADRATILES_GILDED.get());
+        this.dropSelf(ModBlocks.CHISILED_BASALT.get());
+        this.dropSelf(ModBlocks.PATTERNED_BASALT .get());
+        this.dropSelf(ModBlocks.BASALTIC_BLACKSTONE.get());
 
 
     }
