@@ -1,5 +1,5 @@
 {
-  "parent": "grimmod:block/outer_stairs",
+  "parent": "minecraft:block/outer_stairs",
   "textures": {
     "bottom": "grimmod:block/charred_planks",
     "top": "grimmod:block/charred_planks",

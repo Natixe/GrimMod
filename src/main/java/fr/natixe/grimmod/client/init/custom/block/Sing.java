@@ -30,15 +30,14 @@ import javax.annotation.Nullable;
 import javax.annotation.Nullable;
 import java.util.stream.Stream;
 
-public class Sing extends HorizontalBlock implements IWaterLoggable {
-    public Sing(AbstractBlock.Properties p_i241175_1_) {
+public class Sing extends HorizontalBlock {
+
+    public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
+
+    public Sing(Properties p_i241175_1_) {
         super(p_i241175_1_);
         this.registerDefaultState(this.stateDefinition.any().setValue(WATERLOGGED, Boolean.valueOf(false)));
-        //this.registerDefaultState(this.stateDefinition.any().setValue(ROTATION, Integer.valueOf(0)).setValue(WATERLOGGED, Boolean.valueOf(false)));
-
     }
-    public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
-    public static final IntegerProperty ROTATION = BlockStateProperties.ROTATION_16;
 
 
     @Nullable
@@ -52,20 +51,20 @@ public class Sing extends HorizontalBlock implements IWaterLoggable {
     }
 
 
-   @Override
-   public FluidState getFluidState(BlockState p_204507_1_) {
-       return p_204507_1_.getValue(WATERLOGGED) ? Fluids.WATER.getSource(false) : super.getFluidState(p_204507_1_);
-   }
+    @Override
+    public FluidState getFluidState(BlockState p_204507_1_) {
+        return p_204507_1_.getValue(WATERLOGGED) ? Fluids.WATER.getSource(false) : super.getFluidState(p_204507_1_);
+    }
 
-   @Override
-   public boolean isPathfindable(BlockState p_196266_1_, IBlockReader p_196266_2_, BlockPos p_196266_3_, PathType p_196266_4_) {
-       return false;
-   }
+    @Override
+    public boolean isPathfindable(BlockState p_196266_1_, IBlockReader p_196266_2_, BlockPos p_196266_3_, PathType p_196266_4_) {
+        return false;
+    }
 
     private static final VoxelShape SHAPE_N = VoxelShapes.join(
-                    Block.box(7, 0, 7, 9, 14, 9),
-                    Block.box(0, 5, 6, 16, 16, 7),
-                    IBooleanFunction.OR);
+            Block.box(7, 0, 7, 9, 14, 9),
+            Block.box(0, 5, 6, 16, 16, 7),
+            IBooleanFunction.OR);
 
     private static final VoxelShape SHAPE_W = VoxelShapes.join(
             Block.box(7, 0, 7, 9, 14, 9),
@@ -83,20 +82,22 @@ public class Sing extends HorizontalBlock implements IWaterLoggable {
             IBooleanFunction.OR);
 
 
+    @Override
     public VoxelShape getShape(BlockState state, IBlockReader worldIn, BlockPos pos, ISelectionContext context) {
-       switch(state.getValue(FACING)) {
-           case NORTH:
-               return SHAPE_N;
-           case SOUTH:
-               return SHAPE_S;
-           case WEST:
-               return SHAPE_W;
-           case EAST:
-               return SHAPE_E;
-           default:
-               return SHAPE_N;
-       }
+        switch(state.getValue(FACING)) {
+            case NORTH:
+                return SHAPE_N;
+            case SOUTH:
+                return SHAPE_S;
+            case WEST:
+                return SHAPE_W;
+            case EAST:
+                return SHAPE_E;
+            default:
+                return SHAPE_N;
+        }
     }
+
 
     protected void fillStateContainer(StateContainer.Builder<Block, BlockState> builder) {
         builder.add(FACING);
@@ -106,20 +107,9 @@ public class Sing extends HorizontalBlock implements IWaterLoggable {
     @Nullable
     @Override
     public BlockState getStateForPlacement(BlockItemUseContext context) {
-        FluidState fluidstate = context.getLevel().getFluidState(context.getClickedPos());
-        boolean flag = fluidstate.getType() == Fluids.WATER;
-        return super.getStateForPlacement(context).setValue(WATERLOGGED, Boolean.valueOf(flag));
-    }
-
-
-    @Override
-    public BlockState rotate(BlockState p_185499_1_, Rotation p_185499_2_) {
-        return p_185499_1_.setValue(ROTATION, Integer.valueOf(p_185499_2_.rotate(p_185499_1_.getValue(ROTATION), 16)));
-    }
-
-    @Override
-    public BlockState mirror(BlockState p_185471_1_, Mirror p_185471_2_) {
-        return p_185471_1_.setValue(ROTATION, Integer.valueOf(p_185471_2_.mirror(p_185471_1_.getValue(ROTATION), 16)));
+       FluidState fluidstate = context.getLevel().getFluidState(context.getClickedPos());
+       boolean flag = fluidstate.getType() == Fluids.WATER;
+       return super.getStateForPlacement(context).setValue(WATERLOGGED, Boolean.valueOf(flag)).setValue(FACING, context.getHorizontalDirection().getOpposite());
     }
 
     @Override
