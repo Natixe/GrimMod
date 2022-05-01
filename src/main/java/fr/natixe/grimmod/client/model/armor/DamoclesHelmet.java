@@ -1,13 +1,17 @@
 package fr.natixe.grimmod.client.model.armor;
 
+import com.google.common.collect.ImmutableList;
 import com.mojang.blaze3d.matrix.MatrixStack;
 import com.mojang.blaze3d.vertex.IVertexBuilder;
 import it.unimi.dsi.fastutil.objects.ObjectArrayList;
 import it.unimi.dsi.fastutil.objects.ObjectList;
+import net.minecraft.client.renderer.IRenderTypeBuffer;
 import net.minecraft.client.renderer.entity.model.ArmorStandModel;
 import net.minecraft.client.renderer.entity.model.BipedModel;
+import net.minecraft.client.renderer.entity.model.PlayerModel;
 import net.minecraft.client.renderer.model.ModelHelper;
 import net.minecraft.client.renderer.model.ModelRenderer;
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.item.ArmorStandEntity;
 import net.minecraft.inventory.EquipmentSlotType;
@@ -105,21 +109,21 @@ public abstract class DamoclesHelmet extends BipedModel<LivingEntity> {
 		bone15.setPos(0.0F, 24.0F, 0.0F);
 		head.addChild(bone15);
 
-		this.head.addChild(bone1);
-		this.head.addChild(bone2);
-		this.head.addChild(bone3);
-		this.head.addChild(bone4);
-		this.head.addChild(bone5);
-		this.head.addChild(bone6);
-		this.head.addChild(bone7);
-		this.head.addChild(bone8);
-		this.head.addChild(bone9);
-		this.head.addChild(bone10);
-		this.head.addChild(bone11);
-		this.head.addChild(bone12);
-		this.head.addChild(bone13);
-		this.head.addChild(bone14);
-		this.head.addChild(bone15);
+		//this.head.addChild(bone1);
+		//this.head.addChild(bone2);
+		//this.head.addChild(bone3);
+		//this.head.addChild(bone4);
+		//this.head.addChild(bone5);
+		//this.head.addChild(bone6);
+		//this.head.addChild(bone7);
+		//this.head.addChild(bone8);
+		//this.head.addChild(bone9);
+		//this.head.addChild(bone10);
+		//this.head.addChild(bone11);
+		//this.head.addChild(bone12);
+		//this.head.addChild(bone13);
+		//this.head.addChild(bone14);
+		//this.head.addChild(bone15);
 
 		setupArmorParts();
 	}
@@ -127,41 +131,32 @@ public abstract class DamoclesHelmet extends BipedModel<LivingEntity> {
 	public abstract void setupArmorParts();
 
 
-	public final String getTexture(){
+	public final String getTexture() {
 		return this.texture;
 	}
 
-	public final DamoclesHelmet applyEntityStats(BipedModel defaultArmor){
-
-		this.leftArmPose = defaultArmor.leftArmPose;
-		this.rightArmPose = defaultArmor.rightArmPose;
+	public final DamoclesHelmet applyEntityStats(BipedModel defaultArmor) {
+		this.young = defaultArmor.young;
 		this.crouching = defaultArmor.crouching;
-		this.head.copyFrom(defaultArmor.head);
-		this.hat.copyFrom(defaultArmor.hat);
-		this.body.copyFrom(defaultArmor.body);
-		this.rightArm.copyFrom(defaultArmor.rightArm);
-		this.leftArm.copyFrom(defaultArmor.leftArm);
-		this.rightLeg.copyFrom(defaultArmor.rightLeg);
-		this.leftLeg.copyFrom(defaultArmor.leftLeg);
+		this.riding = defaultArmor.riding;
+		this.rightArmPose = defaultArmor.rightArmPose;
+		this.leftArmPose = defaultArmor.leftArmPose;
+		this.head = defaultArmor.head;
 
 		return this;
 	}
 
 
-	@Override
-	public void copyPropertiesTo(BipedModel p_217148_1_) {
-		super.copyPropertiesTo(p_217148_1_);
-		p_217148_1_.leftArmPose = this.leftArmPose;
-		p_217148_1_.rightArmPose = this.rightArmPose;
-		p_217148_1_.crouching = this.crouching;
-		p_217148_1_.head.copyFrom(this.head);
-		p_217148_1_.hat.copyFrom(this.hat);
-		p_217148_1_.body.copyFrom(this.body);
-		p_217148_1_.rightArm.copyFrom(this.rightArm);
-		p_217148_1_.leftArm.copyFrom(this.leftArm);
-		p_217148_1_.rightLeg.copyFrom(this.rightLeg);
-		p_217148_1_.leftLeg.copyFrom(this.leftLeg);
-	}
+
+
+	//@Override
+	//public void copyPropertiesTo(BipedModel p_217148_1_) {
+	//	super.copyPropertiesTo(p_217148_1_);
+	//	p_217148_1_.crouching = this.crouching;
+	//	p_217148_1_.head.copyFrom(this.head);
+	//	p_217148_1_.head.copyFrom(this.head);
+	//	p_217148_1_.hat.copyFrom(this.hat);
+	//}
 
 	public BipedModel applySlot(EquipmentSlotType slot){
 		bone1.visible = false;
@@ -179,9 +174,7 @@ public abstract class DamoclesHelmet extends BipedModel<LivingEntity> {
 		bone13.visible = false;
 		bone14.visible = false;
 		bone15.visible = false;
-
 		switch(slot){
-			// there CHEST That means our armor is chest armor , Helmet HEAD, Shin guards LEGS, Boots FEET
 			case HEAD:
 				bone1.visible = true;
 				bone2.visible = true;
@@ -202,31 +195,56 @@ public abstract class DamoclesHelmet extends BipedModel<LivingEntity> {
 			default:
 				break;
 		}
+
 		return this;
 	}
 
 
+	//@Override
+	//public void renderToBuffer(MatrixStack matrixStack, IVertexBuilder buffer, int packedLight, int packedOverlay, float red, float green, float blue, float alpha){
+	//	bone1.render(matrixStack, buffer, packedLight, packedOverlay, red, green, blue, alpha);
+	//	bone2.render(matrixStack, buffer, packedLight, packedOverlay, red, green, blue, alpha);
+	//	bone3.render(matrixStack, buffer, packedLight, packedOverlay, red, green, blue, alpha);
+	//	bone4.render(matrixStack, buffer, packedLight, packedOverlay, red, green, blue, alpha);
+	//	bone5.render(matrixStack, buffer, packedLight, packedOverlay, red, green, blue, alpha);
+	//	bone6.render(matrixStack, buffer, packedLight, packedOverlay, red, green, blue, alpha);
+	//	bone7.render(matrixStack, buffer, packedLight, packedOverlay, red, green, blue, alpha);
+	//	bone8.render(matrixStack, buffer, packedLight, packedOverlay, red, green, blue, alpha);
+	//	bone9.render(matrixStack, buffer, packedLight, packedOverlay, red, green, blue, alpha);
+	//	bone10.render(matrixStack, buffer, packedLight, packedOverlay, red, green, blue, alpha);
+	//	bone11.render(matrixStack, buffer, packedLight, packedOverlay, red, green, blue, alpha);
+	//	bone12.render(matrixStack, buffer, packedLight, packedOverlay, red, green, blue, alpha);
+	//	bone13.render(matrixStack, buffer, packedLight, packedOverlay, red, green, blue, alpha);
+	//	bone14.render(matrixStack, buffer, packedLight, packedOverlay, red, green, blue, alpha);
+	//	bone15.render(matrixStack, buffer, packedLight, packedOverlay, red, green, blue, alpha);
+	//}
+
+	//public void render(MatrixStack matrixStack, IVertexBuilder buffer, int packedLight, int packedOverlay, float red, float green, float blue, float alpha) {
+	//	copyModelAngles(this.head, this.bone1);
+	//	copyModelAngles(this.head, this.bone2);
+	//	copyModelAngles(this.head, this.bone3);
+	//	copyModelAngles(this.head, this.bone4);
+	//	copyModelAngles(this.head, this.bone5);
+	//	copyModelAngles(this.head, this.bone6);
+	//	copyModelAngles(this.head, this.bone7);
+	//	copyModelAngles(this.head, this.bone8);
+	//	copyModelAngles(this.head, this.bone9);
+	//	copyModelAngles(this.head, this.bone10);
+	//	copyModelAngles(this.head, this.bone11);
+	//	copyModelAngles(this.head, this.bone12);
+	//	copyModelAngles(this.head, this.bone13);
+	//	copyModelAngles(this.head, this.bone14);
+	//	copyModelAngles(this.head, this.bone15);
+	//	matrixStack.pushPose();
+	//	if(crouching) matrixStack.translate(0, 0.2, 0);
+//
+	//	renderChildrenOnly(this.head, matrixStack, buffer, packedLight, packedOverlay, red, green, blue, alpha);
+//
+	//	matrixStack.popPose();
+	//}
+
 	@Override
-	public void renderToBuffer(MatrixStack matrixStack, IVertexBuilder buffer, int packedLight, int packedOverlay, float red, float green, float blue, float alpha){
-		bone1.render(matrixStack, buffer, packedLight, packedOverlay, red, green, blue, alpha);
-		bone2.render(matrixStack, buffer, packedLight, packedOverlay, red, green, blue, alpha);
-		bone3.render(matrixStack, buffer, packedLight, packedOverlay, red, green, blue, alpha);
-		bone4.render(matrixStack, buffer, packedLight, packedOverlay, red, green, blue, alpha);
-		bone5.render(matrixStack, buffer, packedLight, packedOverlay, red, green, blue, alpha);
-		bone6.render(matrixStack, buffer, packedLight, packedOverlay, red, green, blue, alpha);
-		bone7.render(matrixStack, buffer, packedLight, packedOverlay, red, green, blue, alpha);
-		bone8.render(matrixStack, buffer, packedLight, packedOverlay, red, green, blue, alpha);
-		bone9.render(matrixStack, buffer, packedLight, packedOverlay, red, green, blue, alpha);
-		bone10.render(matrixStack, buffer, packedLight, packedOverlay, red, green, blue, alpha);
-		bone11.render(matrixStack, buffer, packedLight, packedOverlay, red, green, blue, alpha);
-		bone12.render(matrixStack, buffer, packedLight, packedOverlay, red, green, blue, alpha);
-		bone13.render(matrixStack, buffer, packedLight, packedOverlay, red, green, blue, alpha);
-		bone14.render(matrixStack, buffer, packedLight, packedOverlay, red, green, blue, alpha);
-		bone15.render(matrixStack, buffer, packedLight, packedOverlay, red, green, blue, alpha);
-	}
-
-
-	public void render(MatrixStack matrixStack, IVertexBuilder buffer, int packedLight, int packedOverlay, float red, float green, float blue, float alpha) {
+	public void renderToBuffer(MatrixStack matrixStack, IVertexBuilder buffer, int packedLight, int packedOverlay, float red, float green, float blue, float alpha) {
 		copyModelAngles(this.head, this.bone1);
 		copyModelAngles(this.head, this.bone2);
 		copyModelAngles(this.head, this.bone3);
@@ -242,6 +260,7 @@ public abstract class DamoclesHelmet extends BipedModel<LivingEntity> {
 		copyModelAngles(this.head, this.bone13);
 		copyModelAngles(this.head, this.bone14);
 		copyModelAngles(this.head, this.bone15);
+
 		matrixStack.pushPose();
 		if(crouching) matrixStack.translate(0, 0.2, 0);
 
@@ -260,42 +279,48 @@ public abstract class DamoclesHelmet extends BipedModel<LivingEntity> {
 		}
 	}
 
-	//@Override
-	//public void setupAnim(LivingEntity entityIn, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
-	//	if(entityIn instanceof ArmorStandEntity) {
-	//		super.setupAnim(entityIn, 0, 0, 0, 0, 0);
-	//	} else {
-	//		super.setupAnim(entityIn, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch);
-	//	}
+
+
+	//protected Iterable<ModelRenderer> headParts() {
+	//	return ImmutableList.of(this.head);
+	//}
+////
+	//public ModelRenderer getHead() {
+	//	return this.head;
+	//}
+////
+	//public void setAllVisible(boolean p_178719_1_) {
+	//	this.head.visible = p_178719_1_;
+	//	this.hat.visible = p_178719_1_;
 	//}
 
-	@Override
-	public void setupAnim(LivingEntity entityIn, float p_225597_2_, float p_225597_3_, float p_225597_4_, float p_225597_5_, float p_225597_6_) {
-		boolean flag = entityIn.getFallFlyingTicks() > 4;
-		boolean flag1 = entityIn.isVisuallySwimming();
-		this.head.yRot = p_225597_5_ * ((float)Math.PI / 180F);
-		if (flag) {
-			this.head.xRot = (-(float)Math.PI / 4F);
-		} else if (this.swimAmount > 0.0F) {
-			if (flag1) {
-				this.head.xRot = this.rotlerpRad(this.swimAmount, this.head.xRot, (-(float)Math.PI / 4F));
-			} else {
-				this.head.xRot = this.rotlerpRad(this.swimAmount, this.head.xRot, p_225597_6_ * ((float)Math.PI / 180F));
-			}
-		} else {
-			this.head.xRot = p_225597_6_ * ((float)Math.PI / 180F);
-		}
 
-		this.setupAttackAnimation(entityIn, p_225597_4_);
-		if (this.crouching) {
-			this.head.y = 4.2F;
-		} else {
-			this.head.y = 0.0F;
-		}
-
-		this.hat.copyFrom(this.head);
-	}
-
+	//@Override
+	//public void setupAnim(LivingEntity entityIn, float p_225597_2_, float p_225597_3_, float p_225597_4_, float p_225597_5_, float p_225597_6_) {
+	//	boolean flag = entityIn.getFallFlyingTicks() > 4;
+	//	boolean flag1 = entityIn.isVisuallySwimming();
+	//	this.head.yRot = p_225597_5_ * ((float)Math.PI / 180F);
+	//	if (flag) {
+	//		this.head.xRot = (-(float)Math.PI / 4F);
+	//	} else if (this.swimAmount > 0.0F) {
+	//		if (flag1) {
+	//			this.head.xRot = this.rotlerpRad(this.swimAmount, this.head.xRot, (-(float)Math.PI / 4F));
+	//		} else {
+	//			this.head.xRot = this.rotlerpRad(this.swimAmount, this.head.xRot, p_225597_6_ * ((float)Math.PI / 180F));
+	//		}
+	//	} else {
+	//		this.head.xRot = p_225597_6_ * ((float)Math.PI / 180F);
+	//	}
+////
+	//	this.setupAttackAnimation(entityIn, p_225597_4_);
+	//	if (this.crouching) {
+	//		this.head.y = 4.2F;
+	//	} else {
+	//		this.head.y = 0.0F;
+	//	}
+////
+	//	this.hat.copyFrom(this.head);
+	//}
 
 
 

@@ -3,6 +3,7 @@ package fr.natixe.grimmod.client.init.armor;
 import fr.natixe.grimmod.client.init.ModItems;
 import fr.natixe.grimmod.client.model.armor.DamoclesHelmet;
 import net.minecraft.client.renderer.entity.model.BipedModel;
+import net.minecraft.client.renderer.entity.model.EntityModel;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
@@ -23,7 +24,6 @@ import java.util.function.Supplier;
 public class ModArmorItem extends ArmorItem {
 
     private Supplier<Supplier<DamoclesHelmet>> armorModel;
-
     public ModArmorItem(IArmorMaterial material, EquipmentSlotType equipmentSlot, Item.Properties properties, Supplier<Supplier<DamoclesHelmet>> armorModel) {
         super(material, equipmentSlot, properties);
         this.armorModel = armorModel;
@@ -34,7 +34,8 @@ public class ModArmorItem extends ArmorItem {
     @Nullable
     @Override
     public final BipedModel getArmorModel(LivingEntity entity, ItemStack itemStack, EquipmentSlotType armorSlot, BipedModel defaultArmor) {
-        return armorModel.get().get().applyEntityStats(defaultArmor).applySlot(armorSlot);
+        this.armorModel.get().get().copyPropertiesTo((EntityModel<LivingEntity>) defaultArmor);
+        return armorModel.get().get().applyEntityStats(defaultArmor).applySlot(EquipmentSlotType.HEAD);
     }
 
     @Nullable
@@ -43,6 +44,7 @@ public class ModArmorItem extends ArmorItem {
         return armorModel.get().get().getTexture();
     }
 
+    @OnlyIn(Dist.CLIENT)
     @Override
     public void onArmorTick(ItemStack stack, World world, PlayerEntity player) {
         if(player.getItemBySlot(EquipmentSlotType.HEAD).getItem() == ModItems.DAMOCLES_HELMET.get())

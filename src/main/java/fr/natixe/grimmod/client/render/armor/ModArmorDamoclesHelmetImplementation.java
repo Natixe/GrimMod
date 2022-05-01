@@ -9,6 +9,7 @@ public class ModArmorDamoclesHelmetImplementation extends DamoclesHelmet {
     public ModArmorDamoclesHelmetImplementation() {
         super(64, 64, new ResourceLocation(GrimMod.MODID,"textures/models/armor/damoclesarmor.png"));
     }
+    
 
     @Override
     public void setupArmorParts() {
@@ -830,4 +831,7 @@ public class ModArmorDamoclesHelmetImplementation extends DamoclesHelmet {
         head.addChild(bone15);
 
     }
+
+
+
 }
