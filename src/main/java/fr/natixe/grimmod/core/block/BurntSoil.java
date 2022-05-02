@@ -1,4 +1,4 @@
-package fr.natixe.grimmod.client.init.custom.block;
+package fr.natixe.grimmod.core.block;
 
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;

@@ -1,7 +1,7 @@
-package fr.natixe.grimmod.data;
+package fr.natixe.grimmod.core.data;
 
 import fr.natixe.grimmod.GrimMod;
-import fr.natixe.grimmod.data.recipe.RecipeGenerator;
+import fr.natixe.grimmod.core.data.recipe.RecipeGenerator;
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;

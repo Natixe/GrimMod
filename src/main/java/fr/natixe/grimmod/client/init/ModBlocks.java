@@ -1,9 +1,9 @@
 package fr.natixe.grimmod.client.init;
 
 import fr.natixe.grimmod.GrimMod;
-import fr.natixe.grimmod.client.init.custom.block.BurntSoil;
-import fr.natixe.grimmod.client.init.custom.block.CharredFarmLandBlock;
-import fr.natixe.grimmod.client.init.custom.block.Sing;
+import fr.natixe.grimmod.core.block.BurntSoil;
+import fr.natixe.grimmod.core.block.CharredFarmLandBlock;
+import fr.natixe.grimmod.core.block.Sing;
 import fr.natixe.grimmod.client.utils.ModCreativeTab;
 import net.minecraft.block.*;
 import net.minecraft.block.material.Material;

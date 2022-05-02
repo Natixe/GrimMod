@@ -1,10 +1,9 @@
-package fr.natixe.grimmod.data;
+package fr.natixe.grimmod.core.data;
 
 import com.google.common.collect.ImmutableList;
 import com.mojang.datafixers.util.Pair;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.LootTableProvider;
-import net.minecraft.data.loot.BlockLootTables;
 import net.minecraft.loot.*;
 import net.minecraft.util.ResourceLocation;
 import java.util.List;

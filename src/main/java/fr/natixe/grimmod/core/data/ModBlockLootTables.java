@@ -1,4 +1,4 @@
-package fr.natixe.grimmod.data;
+package fr.natixe.grimmod.core.data;
 
 import fr.natixe.grimmod.client.init.ModBlocks;
 import net.minecraft.block.Block;

@@ -1,4 +1,4 @@
-package fr.natixe.grimmod.client.init.armor;
+package fr.natixe.grimmod.client.armor;
 
 import fr.natixe.grimmod.client.init.ModItems;
 import fr.natixe.grimmod.client.model.armor.DamoclesHelmet;

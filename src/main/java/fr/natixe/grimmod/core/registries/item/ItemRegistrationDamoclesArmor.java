@@ -1,4 +1,4 @@
-package fr.natixe.grimmod.common.registration.item;
+package fr.natixe.grimmod.core.registries.item;
 
 import fr.natixe.grimmod.client.model.armor.DamoclesHelmet;
 import fr.natixe.grimmod.client.render.armor.ModArmorDamoclesHelmetImplementation;

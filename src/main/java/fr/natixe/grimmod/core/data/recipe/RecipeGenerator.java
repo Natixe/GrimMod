@@ -1,4 +1,4 @@
-package fr.natixe.grimmod.data.recipe;
+package fr.natixe.grimmod.core.data.recipe;
 
 import fr.natixe.grimmod.client.init.ModBlocks;
 import net.minecraft.advancements.criterion.InventoryChangeTrigger;
